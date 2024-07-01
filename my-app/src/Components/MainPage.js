@@ -186,17 +186,6 @@ export default class main extends Component {
               </Col>
             </Row>
           </Container>
-          <Container className="ms-50">
-            <img src={drochKakayato} style={{position:"relative",  left:"750px", marginTop:"-700px"}} />
-            <img src={Zelenayhueta} style={{position:"absolute", marginLeft:"-1176px", marginTop:"-285px"}}/>
-            <img src={afdasfeaf} style={{position:"absolute", marginLeft:"-230px", marginTop: "-285px"}} />
-            <img src={Oblako6} style={{position:"absolute", marginLeft:"-500px", marginTop:"-455px", zIndex:"2" }} />
-            <img src={Step} style={{position:"absolute", marginTop:"-350px", marginLeft:"-100px"}} />
-            <img src={Plenka1} style={{position:"absolute",marginTop:"-50px",  marginLeft:"-770px", width:"450px", zIndex:"2"}}/>
-            <img src={fsdfsfewasf} style={{position:"absolute", marginLeft:"-750px", marginTop:"-280px", zIndex:"1" }} />
-            <h1 style={{position:"absolute", marginLeft:"570px", fontSize:"70px", marginTop:"-70px"}} >Наши клиенты</h1>
-            <p style={{position:"absolute", marginLeft:"570px",  marginTop:"20px"}}>Давайте посмотрим плеку наших клиентов, здесь мы собрали<br/>только малую часть. Мы гарантируем эффективность нашей<br/>работы в кротчайшие сроки.</p>
-          </Container>
       </div>
       </>
     )
