@@ -1,8 +1,7 @@
-.App {
-  text-align: center;
-  font-family: 'MyFont';
-  src: local('MyFont'), url('./Components/Photo/ofont.ru_Raleway.ttf'), format('ttf');
+body {
+  font-family: 'Raleway', sans-serif !important;
 }
+
 
 .App-logo {
   height: 40vmin;
