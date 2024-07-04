@@ -4,11 +4,11 @@ import balckBG from './Photo/hjnifsd.svg'
 import './сss1/slider1.css'
 
 
-export default class Carousel1 extends Component {
-  render() {
+function SecondCarousel(){
     return (
       <div >
-        <Carousel>
+        
+        <Carousel className='second-carousel'>
                 <CarouselItem>
                   <img src={balckBG} alt="/" style={{marginTop:"700px", height:"400px"}} />
                   <CarouselCaption>
@@ -146,4 +146,4 @@ Baby-b.com.ua<br />
       </div>
     )
   }
-}
+  export default SecondCarousel;

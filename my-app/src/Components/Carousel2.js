@@ -11,12 +11,11 @@ import Plenka9 from './Photo/2.svg'
 import { Carousel, CarouselCaption,CarouselItem } from 'react-bootstrap'
 
 
-export default class Carousel2 extends Component {
-  render() {
+function FirstCarousel() {
     return (
         <>
       <div >
-        <Carousel>
+        <Carousel className='first-carousel'>
               <CarouselItem>
                 <img src={Plenka2} alt="/" style={{ marginLeft:"328px", marginTop:"212px", zIndex:"3", width:"450px" }}/>
               </CarouselItem>
@@ -46,4 +45,5 @@ export default class Carousel2 extends Component {
       </>
     )
   }
-}
+  export default FirstCarousel
+

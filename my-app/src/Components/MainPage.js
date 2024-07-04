@@ -52,6 +52,7 @@ import balckBG from './Photo/hjnifsd.svg'
 import QuotMarks from './Photo/Group (1).svg'
 import Carousel1 from './Carousel1'
 import Footer from './Footer'
+import WhiteArrow from './Photo/отправить.svg'
 export const FontLink = () => {
   return (
     <link
@@ -79,9 +80,9 @@ export default class main extends Component {
             <img src={Svechenie2} alt="/" style={{position:"absolute", marginTop:"-125px", marginLeft:"50px", zIndex:"-1"}} />
             <img src={Svechenie3} alt="/" style={{position:"absolute", marginTop:"-250px", marginLeft:"600px", zIndex:"-1"}} />
             <img src={Oblako3} alt="/" style={{position:"absolute", marginTop:"10px", marginLeft:"400px", zIndex:"4"}} />
-            <h1 style={{position:"absolute", fontSize:"100px", marginTop:"-650px", zIndex:"7", marginLeft:"80px"}} >WEB-ДИЗАЙН <br/> СТУДИЯ</h1>
-            <h2 style={{position:"absolute", fontSize:"20px", marginTop:"-400px", zIndex:"7", marginLeft:"80px"}}>Давайте раскроем возможности вашего <br/> бизнеса вместе!</h2>
-            <h1 style={{position:"absolute", marginTop:"200px", marginLeft:"150px", fontSize:"80px"}} >Почему <br /> мы лучшие</h1>
+            <h1 style={{position:"absolute", fontSize:"100px", marginTop:"-650px", zIndex:"7", marginLeft:"40px", fontWeight:"699"}} >WEB-ДИЗАЙН <br/> СТУДИЯ</h1>
+            <h2 style={{position:"absolute", fontSize:"20px", marginTop:"-400px", zIndex:"7", marginLeft:"40px"}}>Давайте раскроем возможности вашего <br/> бизнеса вместе!</h2>
+            <h1 style={{position:"absolute", marginTop:"200px", marginLeft:"150px", fontSize:"80px", fontWeight:"699"}} >Почему <br /> мы лучшие</h1>
             <p style={{position:"absolute", fontSize:"17px", marginTop:"430px", marginLeft:"150px"}} >Наш основной рабочий принцип - это полное взаимное доверие с<br/> Клиентом. Наша работа нацелена на результат, мы делаем<br/>интересные, качественные и нужные работы.</p>
         </Container>
         <Container className="ms-50" style={{position:"relative" ,left:"60px"}}>
@@ -159,25 +160,25 @@ export default class main extends Component {
           <Container className="ms-50">
             <img src={train} alt="/" style={{width:"90%", position:"relative", left:"100px"}} />
             <img src={Oblako5} alt="/" style={{width:"25%", position:"relative", top:"-380px", left:"220px"}}/>
-            <h1 style={{position:"relative", top:"-430px", left:"100px", fontSize:"70px"}} > Как мы <br/> работаем</h1>
+            <h1 style={{position:"relative", top:"-430px", left:"100px", fontSize:"70px", fontWeight:"699"}} > Как мы <br/> работаем</h1>
           </Container>
           <Container className="ms-50">
             <Row>
               <Col>
               <img src={Zabor} alt="/" style={{position:"relative", top:"-390px"}} />
-              <h1 style={{position:"relative", top:"-460px", left:"100px", fontSize:"28px"}}>Станция 1:<br/>
+              <h1 style={{position:"relative", top:"-460px", left:"100px", fontSize:"28px", fontWeight:"699"}}>Станция 1:<br/>
               Знакомство</h1>
               <p style={{position:"relative", top:"-450px", left:"100px", fontSize:"18px"}}>Погружаемся в нишу клиента ,<br/> проводим маркетинговое <br/>исследование рынка, анализ<br/> конкурентов по Украине.</p>
               </Col>
               <Col>
               <img src={Zabor} alt="/" style={{position:"relative", top:"-390px"}} />
-              <h1 style={{position:"relative", top:"-460px", left:"100px", fontSize:"28px"}}>Станция 2:<br/>
+              <h1 style={{position:"relative", top:"-460px", left:"100px", fontSize:"28px", fontWeight:"699"}}>Станция 2:<br/>
               Концепт</h1>
               <p style={{position:"relative", top:"-450px", left:"100px", fontSize:"18px"}}>Выделение преимуществ, разработка <br/> навигациии прототипов страниц,<br/> написание продающего текста.</p>
               </Col>
               <Col>
               <img src={Zabor} alt="/" style={{position:"relative", top:"-390px"}} />
-              <h1 style={{position:"relative", top:"-460px", left:"100px", fontSize:"28px"}}>Станция 3:<br/>
+              <h1 style={{position:"relative", top:"-460px", left:"100px", fontSize:"28px", fontWeight:"699"}}>Станция 3:<br/>
               SEO</h1>
               <p style={{position:"relative", top:"-450px", left:"100px", fontSize:"18px"}}>Структурируем разделы и страницы<br/>для продвижения по ключевым<br/> запросам. Строим внутреннюю <br/> структуру.</p>
               </Col>
@@ -185,19 +186,19 @@ export default class main extends Component {
             <Row>
               <Col>
               <img src={Zabor} alt="/" style={{position:"relative", top:"-390px"}} />
-              <h1 style={{position:"relative", top:"-460px", left:"100px", fontSize:"28px"}}>Станция 4:<br/>
+              <h1 style={{position:"relative", top:"-460px", left:"100px", fontSize:"28px", fontWeight:"699"}}>Станция 4:<br/>
               Дизайн</h1>
               <p style={{position:"relative", top:"-450px", left:"100px", fontSize:"18px"}}>Дизайн внутренних<br/> страниц, отрисовка модальных <br/>окон,проработка адаптивности для <br/> планшетов и смартфонов.</p>
               </Col>
               <Col>
               <img src={Zabor} alt="/" style={{position:"relative", top:"-390px"}} />
-              <h1 style={{position:"relative", top:"-460px", left:"100px", fontSize:"28px"}}>Станция 5:<br/>
+              <h1 style={{position:"relative", top:"-460px", left:"100px", fontSize:"28px", fontWeight:"699"}}>Станция 5:<br/>
               Программирование</h1>
               <p style={{position:"relative", top:"-450px", left:"100px", fontSize:"18px"}}>Верстка существующих разрешениях<br/> экранов, подключение необходимых <br/>модулей.</p>
               </Col>
               <Col>
               <img src={Zabor} alt="/" style={{position:"relative", top:"-390px"}} />
-              <h1 style={{position:"relative", top:"-460px", left:"100px", fontSize:"28px"}}>Станция 6:<br/>
+              <h1 style={{position:"relative", top:"-460px", left:"100px", fontSize:"28px", fontWeight:"699"}}>Станция 6:<br/>
               Запуск</h1>
               <p style={{position:"relative", top:"-450px", left:"100px", fontSize:"18px"}}>Структурируем разделы и страеицы<br/> для продвижения по ключевым <br/>запросам. Строим внутреннюю<br/> структуру</p>
               </Col>
@@ -211,18 +212,20 @@ export default class main extends Component {
             <img src={Step} alt="/" style={{position:"absolute", marginTop:"-350px", marginLeft:"-100px"}} />
             <img src={Plenka1} alt="/" style={{position:"absolute",marginTop:"-50px",  marginLeft:"-770px", width:"450px", zIndex:"2"}}/>
             <img src={fsdfsfewasf} alt="/" style={{position:"absolute", marginLeft:"-750px", marginTop:"-280px", zIndex:"1" }} />
-            <h1 style={{position:"absolute", marginLeft:"570px", fontSize:"70px", marginTop:"-70px"}} >Наши клиенты</h1>
+            <h1 style={{position:"absolute", marginLeft:"570px", fontSize:"70px", marginTop:"-70px", fontWeight:"699"}} >Наши клиенты</h1>
             <p style={{position:"absolute", marginLeft:"570px",  marginTop:"20px"}}>Давайте посмотрим плеку наших клиентов, здесь мы собрали<br/>только малую часть. Мы гарантируем эффективность нашей<br/>работы в кротчайшие сроки.</p>
             <img src={sdgfdf} alt="/" style={{position:"absolute", marginLeft:"-520px", marginTop:"240px", zIndex:"0", width:"450px" }} />
             <img src={nextSlide} alt="/" style={{position:"absolute",marginTop:"348px", marginLeft:"38px", zIndex:"-1" }} />
             <img src={prevSlide} alt="/" style={{position:"absolute",marginTop:"364px", marginLeft:"-15px", zIndex:"-1" }} />
             <img src={Step2} alt="/" style={{position:"absolute", marginTop:"250px", marginLeft:"-1000px"}} />
-            <h1 style={{position:"absolute", marginTop:"285px", marginLeft:"810px", fontSize:"25px"}} >Смотреть всех</h1>
+            <h1 style={{position:"absolute", marginTop:"285px", marginLeft:"810px", fontSize:"25px", fontWeight:"699"}} >Смотреть всех</h1>
+            <img src={nextSlide} alt="/" style={{position:"absolute",marginTop:"1068px", marginLeft:"38px", zIndex:"1" }} />
+            <img src={WhiteArrow} alt="/" style={{position:"absolute",marginTop:"1080px", marginLeft:"-465px", zIndex:"1" }} />
             <Carousel2 />
           </Container>
           <Container className="ms-50">
               <img src={girl} alt="/" style={{position:"absolute", marginLeft:"350px", marginTop:"80px"}} />
-              <h1 style={{position:"absolute", marginTop:"200px", fontSize:"75px", marginLeft:"100px"}} >Что о нас <br />говорят?</h1>
+              <h1 style={{position:"absolute", marginTop:"200px", fontSize:"75px", marginLeft:"100px", fontWeight:"699"}} >Что о нас <br />говорят?</h1>
               <p style={{position:"absolute", marginTop:"400px", fontSize:"18px", marginLeft:"100px"}}>Давайте посмотрим плеку наших клиентов, здесь<br />
 мы собрали только малую часть. Мы гарантируем<br />
 эффективность нашей работы в кротчайшие сроки.</p>
