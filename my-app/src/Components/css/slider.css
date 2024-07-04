@@ -13,13 +13,44 @@
 .second-carousel .carousel-control-prev,
 .second-carousel .carousel-control-next {
   background-color: rgba(0, 0, 255, 0);
-  height: 80px;
+  height: 100px;
   width: 80px;
   opacity: 0;
   border-radius: 0;
-  height: 100px;
-  margin-left: 350px ;
-  margin-top: 620px;
-  margin-right: 331px;
   filter: invert(100%);
+  margin-top: 620px;
+}
+
+.second-carousel .carousel-control-prev {
+  margin-left: 350px;
+}
+
+.second-carousel .carousel-control-next {
+  margin-right: 481px;
+}
+
+.second-carousel .carousel-indicators [data-bs-target]:not(.active) {
+  width: 20px !important; /* Ширина квадрата */
+  height: 20px !important; /* Высота квадрата */
+  border-radius: 0 !important; /* Убираем закругление */
+  background-color: #000 !important; /* Цвет фона */
+  border: 1px solid #fff !important; /* Белая граница */
+  margin: 0 5px !important; /* Добавляем отступ между индикаторами */
+}
+
+.second-carousel .carousel-indicators .active {
+  background-color: #95DB3A !important; /* Цвет активного индикатора */
+  border-radius: 0 !important; /* Убираем закругление */
+  width: 20px !important; /* Ширина квадрата */
+  height: 20px !important; /* Высота квадрата */
+  border: none !important; /* Убираем границу для активного индикатора */
+  margin: 0 5px !important; /* Добавляем отступ между индикаторами */
+}
+
+.second-carousel .carousel-indicators {
+  bottom: 400px !important; /* Поднять кнопки выше */
+  width: 280px !important;
+  left: 235px !important;
+  display: flex; /* Делаем индикаторы флекс-контейнером */
+  justify-content: center; /* Центрируем индикаторы */
 }
