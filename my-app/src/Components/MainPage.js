@@ -215,12 +215,13 @@ export default class main extends Component {
             <h1 style={{position:"absolute", marginLeft:"570px", fontSize:"70px", marginTop:"-70px", fontWeight:"699"}} >Наши клиенты</h1>
             <p style={{position:"absolute", marginLeft:"570px",  marginTop:"20px"}}>Давайте посмотрим плеку наших клиентов, здесь мы собрали<br/>только малую часть. Мы гарантируем эффективность нашей<br/>работы в кротчайшие сроки.</p>
             <img src={sdgfdf} alt="/" style={{position:"absolute", marginLeft:"-520px", marginTop:"240px", zIndex:"0", width:"450px" }} />
-            <img src={nextSlide} alt="/" style={{position:"absolute",marginTop:"348px", marginLeft:"38px", zIndex:"-1" }} />
-            <img src={prevSlide} alt="/" style={{position:"absolute",marginTop:"364px", marginLeft:"-15px", zIndex:"-1" }} />
+            <img src={prevSlide} alt="prev" style={{position:"absolute",marginTop:"364px", zIndex:"-1" }} />
+            <img src={prevSlide} alt="next" style={{position:"absolute", marginTop:"364px", marginLeft:"65px", zIndex:"-1", transform:"rotate(180deg)" }} />
             <img src={Step2} alt="/" style={{position:"absolute", marginTop:"250px", marginLeft:"-1000px"}} />
             <h1 style={{position:"absolute", marginTop:"285px", marginLeft:"810px", fontSize:"25px", fontWeight:"699"}} >Смотреть всех</h1>
-            <img src={nextSlide} alt="/" style={{position:"absolute",marginTop:"1080px", marginLeft:"-565px", zIndex:"1" }} />
-            <img src={WhiteArrow} alt="/" style={{position:"absolute",marginTop:"1080px", marginLeft:"-465px", zIndex:"1" }} />
+            <img src={WhiteArrow} alt="prev" style={{position:"absolute",marginTop:"1080px", marginLeft:"-465px", zIndex:"1" }} />
+            <img src={WhiteArrow} alt="next" style={{position:"absolute", marginTop:"1080px", marginLeft:"-130px", zIndex:"1", transform:"rotate(180deg)" }} />
+
             <Carousel2 />
           </Container>
           <Container className="ms-50">

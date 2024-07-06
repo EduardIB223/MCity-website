@@ -26,7 +26,8 @@
 }
 
 .second-carousel .carousel-control-next {
-  margin-right: 481px;
+  margin-right: 536px;
+  width: 65px;
 }
 
 .second-carousel .carousel-indicators [data-bs-target]:not(.active) {
