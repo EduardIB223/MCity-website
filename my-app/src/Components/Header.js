@@ -59,13 +59,7 @@ const Header = () => {
               <NavLink style={{ position: "absolute", fontSize: "20px", marginLeft: "568px", top: "16px" }} href="/">
                 <img src={polosochka} alt="Polosochka" />
               </NavLink>
-              <NavDropdown title="Начать проект" style={{ fontSize: "20px", paddingLeft: "25px", fontWeight: "699" }} id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-              </NavDropdown>
+              <NavLink style={{ fontSize: "20px", paddingLeft: "25px", fontWeight: "699", zIndex:"1" }} as={Link} to="/StartProject">Начать проект</NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

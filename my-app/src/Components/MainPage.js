@@ -219,7 +219,7 @@ export default class main extends Component {
             <img src={prevSlide} alt="/" style={{position:"absolute",marginTop:"364px", marginLeft:"-15px", zIndex:"-1" }} />
             <img src={Step2} alt="/" style={{position:"absolute", marginTop:"250px", marginLeft:"-1000px"}} />
             <h1 style={{position:"absolute", marginTop:"285px", marginLeft:"810px", fontSize:"25px", fontWeight:"699"}} >Смотреть всех</h1>
-            <img src={nextSlide} alt="/" style={{position:"absolute",marginTop:"1068px", marginLeft:"-128px", zIndex:"1" }} />
+            <img src={nextSlide} alt="/" style={{position:"absolute",marginTop:"1080px", marginLeft:"-565px", zIndex:"1" }} />
             <img src={WhiteArrow} alt="/" style={{position:"absolute",marginTop:"1080px", marginLeft:"-465px", zIndex:"1" }} />
             <Carousel2 />
           </Container>

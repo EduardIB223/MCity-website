@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Container, Carousel, CarouselItem, CarouselCaption} from 'react-bootstrap';
 import balckBG from './Photo/hjnifsd.svg'
 
-
 function SecondCarousel(){
     return (
       <div >

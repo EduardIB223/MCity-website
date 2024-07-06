@@ -10,6 +10,7 @@ import GreenDot from './Photo/Mask Group2.svg'
 import Phone from './Photo/Group 137.svg'
 import kvadratik from './Photo/Rectangle 12.svg';
 import polosochka from './Photo/Rectangle 11.svg';
+import { Link } from 'react-router-dom';
 
 export default class Footer extends Component {
   render() {
