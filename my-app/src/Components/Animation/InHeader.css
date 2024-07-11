@@ -1,0 +1,8 @@
+.ForPolosochka{
+    transition: 0.2s;
+    
+}
+.ForPolosochka:hover{
+    transform: scaleY(-8);
+}
+

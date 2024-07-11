@@ -1,33 +1,97 @@
 .first-carousel .carousel-control-prev,
 .first-carousel .carousel-control-next {
   background-color: rgba(255, 0, 0, 0);
-  border-radius: 50%;
-  width: 80px;
-  height: 100px;
+  border-radius: 0;
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+  transition: 0.3s;
   filter: invert(100%);
   margin-left: 802px ;
-  margin-top: 306px;
   margin-right: 330px;
+  opacity: 1;
+  background-image: url('/src/Components/css/активвная стрелка.svg');
+  background-repeat: no-repeat;
+}
+.first-carousel .carousel-control-prev{
+  margin-top: 316px;
+  margin-left: 810px;
+  transform: rotate(180deg);
   opacity: 0;
 }
-.second-carousel .carousel-control-prev,
+.first-carousel .carousel-control-next{
+  margin-top: 325px;
+  margin-right: 350px;
+  opacity: 0;
+}
+
+.first-carousel .carousel-control-prev-icon{
+  margin-top:30px;
+  opacity: 0;
+  
+}
+.first-carousel .carousel-control-next-icon{
+  margin-top:-10px;
+  opacity: 0;
+}
+.second-carousel .carousel-control-next-icon,
+.second-carousel .carousel-control-prev-icon{
+  opacity: 0;
+  
+}
+
+.second-carousel .carousel-control-prev{
+  background-color: rgba(43, 255, 0, 0);
+  height: 70px;
+  width: 80px;
+  margin-top: 630px;
+  opacity:0;
+  transform: rotate(180deg);
+  border-radius: 0;
+  filter: invert(100%);
+  transition: 0.3s;
+  left:3px;
+  background-image: url('/src/Components/css/активвная стрелка.svg');
+  background-repeat: no-repeat;
+}
 .second-carousel .carousel-control-next {
-  background-color: rgba(0, 0, 255, 0);
-  height: 100px;
+  background-color: rgba(43, 255, 0, 0);
+  height: 70px;
   width: 80px;
   opacity: 0;
   border-radius: 0;
   filter: invert(100%);
-  margin-top: 620px;
+  margin-top: 640px;
+  transition: 0.3s;
+  right:18px;
+  background-image: url('/src/Components/css/активвная стрелка.svg');
+  background-repeat: no-repeat;
 }
+
+.second-carousel .carousel-control-next:hover{
+  opacity: 1;
+ 
+}
+.second-carousel .carousel-control-prev:hover{
+  opacity: 1;
+  
+}
+.first-carousel .carousel-control-next:hover{
+  opacity: 1;
+}
+.first-carousel .carousel-control-prev:hover{
+  opacity: 1;
+}
+
 
 .second-carousel .carousel-control-prev {
   margin-left: 350px;
 }
 
 .second-carousel .carousel-control-next {
-  margin-right: 481px;
+  margin-right: 501px;
 }
+
 
 .second-carousel .carousel-indicators [data-bs-target]:not(.active) {
   width: 20px !important; /* Ширина квадрата */
