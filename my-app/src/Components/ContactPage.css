@@ -1,0 +1,164 @@
+.contact-container {
+    position: relative;
+    z-index: 5;
+  }
+  
+  .contact-container img {
+    position: absolute;
+  }
+  
+  .fon1 {
+    margin-left: -300px;
+  }
+  
+  .cloud1 {
+    margin-left: -300px;
+    margin-top: 270px;
+    z-index: 1;
+  }
+  
+  .cloud2 {
+    margin-left: 500px;
+    margin-top: 0px;
+    z-index: 1;
+  }
+  
+  .shy {
+    margin-left: 100px;
+    margin-top: 5px;
+  }
+  
+  .kolo {
+    margin-left: 420px;
+    margin-top: 165px;
+  }
+  
+  .cloud3 {
+    margin-left: 550px;
+    margin-top: 165px;
+  }
+  
+  .globus {
+    margin-left: 620px;
+    margin-top: 115px;
+    z-index: 4;
+  }
+  
+  .palka {
+    margin-left: 545px;
+    margin-top: 525px;
+    z-index: 3;
+    width: 1073px;
+  }
+  
+  .heading {
+    position: absolute;
+    font-size: 80px;
+    font-weight: 699;
+    margin-top: 90px;
+    margin-left: 0px;
+  }
+  
+  .subheading {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 190px;
+    margin-left: 0px;
+  }
+  
+  .cartochka {
+    margin-top: 390px;
+    z-index: 4;
+    margin-left: -40px;
+  }
+  
+  .form-heading {
+    position: absolute;
+    font-size: 50px;
+    font-weight: 699;
+    margin-top: 460px;
+    margin-left: 55px;
+    z-index: 10;
+  }
+  
+  .form-label {
+    position: absolute;
+    font-size: 25px;
+    margin-left: 65px;
+    z-index: 10;
+  }
+  
+  .input {
+    position: absolute;
+    width: 398px;
+    height: 53px;
+    font-size: 25px;
+    z-index: 10;
+    border: 0;
+    background-color: rgb(221, 221, 221);
+  }
+  
+  .input.message {
+    height: 228px;
+  }
+  
+  .send-btn {
+    position: absolute;
+    margin-top: 1200px;
+    margin-left: 200px;
+    z-index: 11;
+  }
+  
+  .address-heading,
+  .email-heading,
+  .phone-heading {
+    position: absolute;
+    font-size: 25px;
+  }
+  
+  .address,
+  .email,
+  .phone {
+    position: absolute;
+    font-size: 25px;
+    font-weight: 699;
+  }
+  
+  .separator {
+    position: absolute;
+  }
+  
+  .black-bg {
+    position: relative;
+    margin-top: 1250px;
+    margin-left: -300px;
+  }
+  
+  .benefits-heading {
+    position: absolute;
+    color: white;
+    font-size: 70px;
+    margin-top: -500px;
+    margin-left: -50px;
+    font-weight: 699;
+  }
+  
+  .benefits-icon {
+    position: absolute;
+    margin-top: -320px;
+  }
+  
+  .benefits-title {
+    position: absolute;
+    color: #95DB3A;
+    font-size: 27px;
+    margin-top: -330px;
+  }
+  
+  .benefits-description {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    margin-top: -255px;
+  }
+  

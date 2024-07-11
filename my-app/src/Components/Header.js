@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <div style={{ position: 'absolute', width: '100%', zIndex: '100' }}>
       <Navbar collapseOnSelect expand="md">
         <Container className="ms-50" style={{ position: "relative", left: "170px", zIndex: "10" }}>
           <Navbar.Brand as={Link} to="/">
@@ -59,7 +59,12 @@ const Header = () => {
               <NavLink style={{ position: "absolute", fontSize: "20px", marginLeft: "568px", top: "16px" }} href="/">
                 <img src={polosochka} alt="Polosochka" />
               </NavLink>
-              <NavLink style={{ fontSize: "20px", paddingLeft: "25px", fontWeight: "699", zIndex:"1" }} as={Link} to="/StartProject">Начать проект</NavLink>
+              <NavLink style={{ fontSize: "20px", paddingLeft: "45px", fontWeight: "699", zIndex:"1", position: 'relative', display: 'inline-block', textAlign: 'center' }} as={Link} to="/StartProject">
+                <div style={{ position: 'relative', display: 'inline-block', textAlign: 'center' }}>
+                  Начать проект>
+                  <img src={tochka} style={{ ...getTochkaStyle("/StartProject"), position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop: '5px' }} alt="Tochka" />
+                </div>
+              </NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

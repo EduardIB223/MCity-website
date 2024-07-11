@@ -9,6 +9,7 @@ import ContactPage from './Components/ContactPage';
 import Clients from './Components/Clients';
 import LoadingImage from './Components/Photo/Group 10.svg';
 import StartProject from './Components/StartProject';
+import Footer from './Components/Footer'; 
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -54,7 +55,12 @@ function App() {
             <Route path="/Contact" element={<ContactPage />} />
             <Route path="/Clients" element={<Clients />} />
             <Route path="/StartProject" element={<StartProject />} />
+            <Route path="/Clients" element={<Clients />} /> // вставить ссылки для работы подвала
+            <Route path="/Clients" element={<Clients />} />
+            <Route path="/Clients" element={<Clients />} />
+            <Route path="/Clients" element={<Clients />} />
           </Routes>
+          <Footer /> 
         </div>
       )}
     </Router>

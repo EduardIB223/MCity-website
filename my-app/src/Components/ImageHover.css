@@ -1,0 +1,27 @@
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-images {
+  position: relative;
+  overflow: hidden;
+}
+
+.primary-image,
+.secondary-image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.secondary-image {
+  opacity: 0;
+  z-index: -1; /* Вторичное изображение позади */
+}
+
+.image-container:hover .secondary-image {
+  opacity: 1;
+}
