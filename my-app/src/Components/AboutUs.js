@@ -147,7 +147,7 @@ export default class AboutUs extends Component {
                 <p style={{position:"absolute",marginTop:"1610px", marginLeft:"600px", fontSize:"25px"}}>Мы всегда открыты для креативных и творческих<br/>
                 личностей. Присылайте резюме нам на: </p>
                 <a href="/" style={{position:"absolute",marginTop:"1700px", marginLeft:"600px", zIndex:"2"}}><img src={SendMail}/></a>
-                <img src={BlackLine} style={{position:"relative", marginTop:"1700px", marginLeft:"-300px", zIndex:"1"}} />
+                <img src={BlackLine} style={{position:"relative", marginTop:"1700px", marginLeft:"-300px", zIndex:"0"}} />
             </Container>
       </div>
       </>

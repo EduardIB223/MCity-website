@@ -51,7 +51,6 @@ import girl from './Photo/Group 78 (5).svg'
 import balckBG from './Photo/hjnifsd.svg'
 import QuotMarks from './Photo/Group (1).svg'
 import Carousel1 from './Carousel1'
-import Footer from './Footer'
 import WhiteArrow from './Photo/отправить.svg'
 export const FontLink = () => {
   return (

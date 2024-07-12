@@ -53,7 +53,7 @@ const Header = () => {
                     <img src={tochka} style={{ ...getTochkaStyle(item.path), position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop: '5px' }} alt="Tochka" />
                   </div>
                 </NavLink>
-              ))}
+              ))} 
               <NavLink style={{ position: "absolute", fontSize: "20px", marginLeft: "568px", top: "0px" }} href="/">
                 <img src={kvadratik} alt="Kvadratik" />
               </NavLink>

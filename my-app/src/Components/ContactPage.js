@@ -48,30 +48,30 @@ export default class ContactPage extends Component {
           <img src={separatedLine} alt="/" style={{ position: "absolute", marginTop: "1060px", marginLeft: "570px" }} />
           <h1 style={{ position: "absolute", marginTop: "1100px", marginLeft: "680px", fontSize: "25px" }} >Телефон:</h1>
           <p style={{ position: "absolute", marginTop: "1130px", marginLeft: "680px", fontSize: "25px", fontWeight: "699" }}>(096) 229-64-63</p>
-          <img src={BlackBG} alt="/" style={{ position: "relative", marginTop: "1250px", marginLeft: "-300px" }} />
-          <h1 style={{ position: "absolute", color: "white", fontSize: "70px", marginTop: "-500px", marginLeft: "-50px", fontWeight: "699" }} >С нами вы получите</h1>
-          <img src={Star} alt="/" style={{ position: "absolute", marginTop: "-320px", marginLeft: "-50px" }} />
-          <h1 style={{ position: "absolute", color: "#95DB3A", fontSize: "27px", marginTop: "-330px", marginLeft: "20px" }} >Соответствие <br />
+          <img src={BlackBG} alt="/" style={{ position: "relative", marginTop: "1250px", marginLeft: "-300px", height:"750px"}} />
+          <h1 style={{ position: "absolute", color: "white", fontSize: "70px", marginTop: "-650px", marginLeft: "-50px", fontWeight: "699" }} >С нами вы получите</h1>
+          <img src={Star} alt="/" style={{ position: "absolute", marginTop: "-470px", marginLeft: "-50px" }} />
+          <h1 style={{ position: "absolute", color: "#95DB3A", fontSize: "27px", marginTop: "-480px", marginLeft: "20px" }} >Соответствие <br />
             задачам и целям</h1>
-          <p style={{ position: "absolute", color: "white", fontSize: "18px", marginTop: "-255px", marginLeft: "20px" }}>Уникальный дизайн,<br /> юзабилити, функционал<br /> сайт будет таким,<br /> каким вы его<br /> представляете.</p>
-          <img src={Star} alt="/" style={{ position: "absolute", marginTop: "-320px", marginLeft: "510px" }} />
-          <h1 style={{ position: "absolute", color: "#95DB3A", fontSize: "27px", marginTop: "-330px", marginLeft: "580px" }} >Готовность <br />
+          <p style={{ position: "absolute", color: "white", fontSize: "18px", marginTop: "-405px", marginLeft: "20px" }}>Уникальный дизайн,<br /> юзабилити, функционал<br /> сайт будет таким,<br /> каким вы его<br /> представляете.</p>
+          <img src={Star} alt="/" style={{ position: "absolute", marginTop: "-470px", marginLeft: "510px" }} />
+          <h1 style={{ position: "absolute", color: "#95DB3A", fontSize: "27px", marginTop: "-480px", marginLeft: "580px" }} >Готовность <br />
             к продвижению</h1>
-          <p style={{ position: "absolute", color: "white", fontSize: "18px", marginTop: "-255px", marginLeft: "570px" }}>Мы учтем все<br /> нюансы разработки,<br /> чтобы ваш сайт вышел<br /> в ТОП выдачи.</p>
-          <img src={Star} alt="/" style={{ position: "absolute", marginTop: "-320px", marginLeft: "1010px" }} />
-          <h1 style={{ position: "absolute", color: "#95DB3A", fontSize: "27px", marginTop: "-330px", marginLeft: "1080px" }} >Профессионализм</h1>
-          <p style={{ position: "absolute", color: "white", fontSize: "18px", marginTop: "-255px", marginLeft: "1070px" }}>Ваши задачи и <br /> ожидания - это наш <br /> приоритет.</p>
-          <img src={Star} alt="/" style={{ position: "absolute", marginTop: "-320px", marginLeft: "-50px" }} />
-          <h1 style={{ position: "absolute", color: "#95DB3A", fontSize: "27px", marginTop: "-50px", marginLeft: "20px" }} >Экономия <br />
+          <p style={{ position: "absolute", color: "white", fontSize: "18px", marginTop: "-405px", marginLeft: "580px" }}>Мы учтем все<br /> нюансы разработки,<br /> чтобы ваш сайт вышел<br /> в ТОП выдачи.</p>
+          <img src={Star} alt="/" style={{ position: "absolute", marginTop: "-490px", marginLeft: "1010px" }} />
+          <h1 style={{ position: "absolute", color: "#95DB3A", fontSize: "27px", marginTop: "-480px", marginLeft: "1080px" }} >Профессионализм</h1>
+          <p style={{ position: "absolute", color: "white", fontSize: "18px", marginTop: "-405px", marginLeft: "1080px" }}>Ваши задачи и <br /> ожидания - это наш <br /> приоритет.</p>
+          <img src={Star} alt="/" style={{ position: "absolute", marginTop: "-200px", marginLeft: "-50px" }} />
+          <h1 style={{ position: "absolute", color: "#95DB3A", fontSize: "27px", marginTop: "-200px", marginLeft: "20px" }} >Экономия <br />
             времени</h1>
-          <p style={{ position: "absolute", color: "white", fontSize: "18px", marginTop: "20px", marginLeft: "20px" }}>Мы быстро реагируем<br /> на запросы клиентов,<br /> сокращая время<br /> на разработку</p>
-          <img src={Star} alt="/" style={{ position: "absolute", marginTop: "-50px", marginLeft: "510px" }} />
-          <h1 style={{ position: "absolute", color: "#95DB3A", fontSize: "27px", marginTop: "-50px", marginLeft: "580px" }} >Оптимальные <br />
+          <p style={{ position: "absolute", color: "white", fontSize: "18px", marginTop: "-130px", marginLeft: "20px" }}>Мы быстро реагируем<br /> на запросы клиентов,<br /> сокращая время<br /> на разработку</p>
+          <img src={Star} alt="/" style={{ position: "absolute", marginTop: "-200px", marginLeft: "510px" }} />
+          <h1 style={{ position: "absolute", color: "#95DB3A", fontSize: "27px", marginTop: "-200px", marginLeft: "580px" }} >Оптимальные <br />
             сроки</h1>
-          <p style={{ position: "absolute", color: "white", fontSize: "18px", marginTop: "20px", marginLeft: "570px" }}>Даем реальные сроки<br /> выполнения работ, <br /> не нарушая их</p>
-          <img src={Star} alt="/" style={{ position: "absolute", marginTop: "-50px", marginLeft: "1010px" }} />
-          <h1 style={{ position: "absolute", color: "#95DB3A", fontSize: "27px", marginTop: "-50px", marginLeft: "1080px" }} >Цена</h1>
-          <p style={{ position: "absolute", color: "white", fontSize: "18px", marginTop: "20px", marginLeft: "1070px" }}>Наши цены доступны<br /> для каждого, а<br /> качество - на высоте!</p>
+          <p style={{ position: "absolute", color: "white", fontSize: "18px", marginTop: "-130px", marginLeft: "580px" }}>Даем реальные сроки<br /> выполнения работ, <br /> не нарушая их</p>
+          <img src={Star} alt="/" style={{ position: "absolute", marginTop: "-210px", marginLeft: "1010px" }} />
+          <h1 style={{ position: "absolute", color: "#95DB3A", fontSize: "27px", marginTop: "-200px", marginLeft: "1080px" }} >Цена</h1>
+          <p style={{ position: "absolute", color: "white", fontSize: "18px", marginTop: "-130px", marginLeft: "1080px" }}>Наши цены доступны<br /> для каждого, а<br /> качество - на высоте!</p>
         </Container>
       </div>
     );

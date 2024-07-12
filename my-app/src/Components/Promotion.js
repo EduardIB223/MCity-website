@@ -107,9 +107,6 @@ export default class Promotion extends Component {
             </Col>
           </Row>
         </Container>
-        <Container style={{ marginTop:"250px"}}>
-          <Footer />
-        </Container>
       </div>
     )
   }
