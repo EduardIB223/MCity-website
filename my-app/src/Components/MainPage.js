@@ -52,6 +52,7 @@ import balckBG from './Photo/hjnifsd.svg'
 import QuotMarks from './Photo/Group (1).svg'
 import Carousel1 from './Carousel1'
 import WhiteArrow from './Photo/отправить.svg'
+import './Animation/InHeader.css';
 export const FontLink = () => {
   return (
     <link

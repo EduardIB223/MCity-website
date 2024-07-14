@@ -6,8 +6,8 @@ import tochka from './Photo/Ellipse 3.svg';
 import kvadratik from './Photo/Rectangle 12.svg';
 import polosochka from './Photo/Rectangle 11.svg';
 import { Link, useLocation } from 'react-router-dom';
-import '../App.css'; // Импорт стилей
-import './Animation/InHeader.css'
+import '../App.css'; 
+import './Animation/InHeader.css';
 
 const Header = () => {
   const location = useLocation();
@@ -19,6 +19,18 @@ const Header = () => {
 
   const getTochkaStyle = (path) => {
     return activeLink === path ? { display: 'block' } : { display: 'none' };
+  };
+
+  const handleMouseEnter = () => {
+    document.querySelector('.ForPolosochka img').classList.add('hovered');
+    document.querySelector('.kvadratik img').classList.add('hovered');
+    document.querySelector('.start-project').classList.add('hovered-text');
+  };
+
+  const handleMouseLeave = () => {
+    document.querySelector('.ForPolosochka img').classList.remove('hovered');
+    document.querySelector('.kvadratik img').classList.remove('hovered');
+    document.querySelector('.start-project').classList.remove('hovered-text');
   };
 
   return (
@@ -53,14 +65,21 @@ const Header = () => {
                     <img src={tochka} style={{ ...getTochkaStyle(item.path), position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop: '5px' }} alt="Tochka" />
                   </div>
                 </NavLink>
-              ))} 
-              <NavLink style={{ position: "absolute", fontSize: "20px", marginLeft: "568px", top: "0px" }} href="/">
-                <img src={kvadratik} alt="Kvadratik" />
-              </NavLink>
+              ))}
+<NavLink style={{ position: "absolute", fontSize: "20px", marginLeft: "585px", }} className="kvadratik" href="/">
+    <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
               <NavLink style={{ position: "absolute", fontSize: "20px", marginLeft: "568px", marginTop: "10px" }} className="ForPolosochka" href="/">
-                <img src={polosochka} alt="Polosochka"/>
+                <img src={polosochka} alt="Polosochka" />
               </NavLink>
-              <NavLink style={{ fontSize: "20px", paddingLeft: "45px", fontWeight: "699", zIndex:"1", position: 'relative', display: 'inline-block', textAlign: 'center' }} as={Link} to="/StartProject">
+              <NavLink
+                style={{ fontSize: "20px", paddingLeft: "45px", fontWeight: "699", zIndex: "1", position: 'relative', display: 'inline-block', textAlign: 'center' }}
+                as={Link}
+                to="/StartProject"
+                className="start-project"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
                 <div style={{ position: 'relative', display: 'inline-block', textAlign: 'center' }}>
                   Начать проект>
                   <img src={tochka} style={{ ...getTochkaStyle("/StartProject"), position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop: '5px' }} alt="Tochka" />
