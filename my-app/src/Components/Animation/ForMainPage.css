@@ -1,0 +1,15 @@
+.Card{
+    position: absolute;
+    transition: 0.4s;
+}
+.CardText{
+    position: absolute;
+    transition: 0.4s;
+}
+.CardContainer{
+    position: relative;
+    transition: 0.4s;
+}
+.CardContainer:hover{
+    margin-left:-20px;
+}

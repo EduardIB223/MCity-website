@@ -29,3 +29,14 @@
     left: -50px; /* сдвиг, чтобы оставался на месте */
     transform: scale(0.1, 0.56); 
 }
+
+.hovered {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hovered-text {
+    color: #ff6347;
+    transition: color 0.3s ease-in-out;
+  }
+  

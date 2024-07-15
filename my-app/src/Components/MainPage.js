@@ -30,6 +30,7 @@ import ChernayaDroch from './Photo/Chernaya Droch.svg'
 import ZelenayaDroch from './Photo/Group 13.svg'
 import Card5 from './Photo/Group 138.svg'
 import Card6 from './Photo/Group 139.svg'
+import shadow from './Photo/ЭТАШЛЮХАХОЧЕТЧЕРНЫХ.svg'
 import Card7 from './Photo/Group 140.svg'
 import kvadratik from './Photo/Rectangle 12.svg';
 import polosochka from './Photo/Rectangle 11.svg';
@@ -52,8 +53,7 @@ import balckBG from './Photo/hjnifsd.svg'
 import QuotMarks from './Photo/Group (1).svg'
 import Carousel1 from './Carousel1'
 import WhiteArrow from './Photo/отправить.svg'
-import './Animation/InHeader.css';
-
+import './Animation/ForMainPage.css'
 export const FontLink = () => {
   return (
     <link
@@ -125,7 +125,7 @@ export default class main extends Component {
           <a style={{ position: "relative", marginLeft: "720px", fontSize: "20px", color: "black", textDecoration: "none", top: "60px" }} href='/'> Узнать больше > </a>
         </Container>
         <Container className="ms-50">
-            <img src={ZelenayaDroch} alt="/" style={{position:"relative", marginTop:"90px", marginLeft:"-280px", zIndex:"-3"}} />
+            <img src={ZelenayaDroch} alt="/" style={{position:"relative", marginTop:"90px", marginLeft:"-280px", zIndex:"-4"}} />
             <h1 style={{position:"relative", marginTop:"-700px", marginLeft:"700px", fontSize:"90px", fontWeight:"599" }} >Чем мы<br/>занимаемся? </h1>
             <p style={{position:"absolute", marginLeft:"700px", fontSize:"20px", }} >Мы предоставляем комплексный набор услуг для продвижения<br/>
             сайта, используя в работе инструменты онлайн маркетинга.</p>
@@ -133,28 +133,37 @@ export default class main extends Component {
           <Container className="ms-50">
             <Row>
               <Col>
-              <img src={Card5} alt="/" style={{position:"absolute",width:"300px" ,marginTop:"180px", marginLeft:"50px", zIndex:"-2"}} />
-              <h1 style={{position:"absolute", marginLeft:"160px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} >Web-дизайн</h1>
-              <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} >Стилизация, идентификация и многое другое решает дизайн. Дизайн это то, что работает. Дизайн и креатив, совмещая которые можно уменьшить вложения в рекламу в несколько раз.</p>
-              <a href="/" style={{position:"absolute",marginLeft:"145px", marginTop:"530px", color:"black", textDecoration:"none", fontSize:"20px" }} >Узнать больше></a>
-              <img src={kvadratik} alt="/" style={{position:"relative",marginLeft:"145px", marginTop:"515px", zIndex:"-1"}} />
-              <img src={polosochka} alt="/" style={{position:"absolute",marginLeft:"-55px", marginTop:"555px", width:"170px" }}/>
-              </Col>
-              <Col >
-              <img src={Card6} alt="/" style={{position:"absolute",width:"300px" ,marginTop:"180px", marginLeft:"50px", zIndex:"-2"}} />
-              <h1 style={{position:"absolute", marginLeft:"160px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} >Web-дизайн</h1>
-              <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} >Стилизация, идентификация и многое другое решает дизайн. Дизайн это то, что работает. Дизайн и креатив, совмещая которые можно уменьшить вложения в рекламу в несколько раз.</p>
-              <a href="/" style={{position:"absolute",marginLeft:"145px", marginTop:"530px", color:"black", textDecoration:"none", fontSize:"20px" }} >Узнать больше></a>
-              <img src={kvadratik} alt="/" style={{position:"relative",marginLeft:"145px", marginTop:"515px", zIndex:"-1"}} />
-              <img src={polosochka} alt="/" style={{position:"absolute",marginLeft:"-55px", marginTop:"555px", width:"170px" }}/>
+              <img src={shadow} style={{position:"absolute",width:"272px", marginTop:"228px", marginLeft:"79px", rotate:"180deg", zIndex:"-3"}}/>
+              <Container style={{position:"absolute"}} className='CardContainer'>
+              <img src={Card5} alt="/" style={{position:"absolute",width:"300px" ,marginTop:"180px", marginLeft:"50px", zIndex:"0"}} className='Card'/>
+              <h1 style={{position:"absolute", marginLeft:"160px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} className='CardText'>Web-дизайн</h1>
+              <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} className='CardText'>Стилизация, идентификация и многое другое решает дизайн. Дизайн это то, что работает. Дизайн и креатив, совмещая которые можно уменьшить вложения в рекламу в несколько раз.</p>
+              <a href="/" style={{position:"absolute",marginLeft:"145px", marginTop:"530px", color:"black", textDecoration:"none", fontSize:"20px", zIndex:"1" }} className='CardText'>Узнать больше></a>
+              <img src={kvadratik} alt="/" style={{position:"relative",marginLeft:"145px", marginTop:"515px", zIndex:"0"}} className='Card'/>
+              <img src={polosochka} alt="/" style={{position:"absolute",marginLeft:"-55px", marginTop:"555px", width:"170px" }}className='Card'/>
+              </Container>
               </Col>
               <Col>
-              <img src={Card7} alt="/" style={{position:"absolute",width:"300px" ,marginTop:"180px", marginLeft:"50px", zIndex:"-2"}} />
-              <h1 style={{position:"absolute", marginLeft:"160px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} >Web-дизайн</h1>
-              <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} >Стилизация, идентификация и многое другое решает дизайн. Дизайн это то, что работает. Дизайн и креатив, совмещая которые можно уменьшить вложения в рекламу в несколько раз.</p>
-              <a href="/" style={{position:"absolute",marginLeft:"145px", marginTop:"530px", color:"black", textDecoration:"none", fontSize:"20px" }} >Узнать больше></a>
-              <img src={kvadratik} alt="/" style={{position:"relative",marginLeft:"145px", marginTop:"515px", zIndex:"-1"}} />
-              <img src={polosochka} alt="/" style={{position:"absolute",marginLeft:"-55px", marginTop:"555px", width:"170px" }}/>
+              <img src={shadow} style={{position:"absolute",width:"272px", marginTop:"228px", marginLeft:"79px", rotate:"180deg", zIndex:"-3"}}/>
+              <Container style={{position:"absolute"}} className='CardContainer'>
+              <img src={Card5} alt="/" style={{position:"absolute",width:"300px" ,marginTop:"180px", marginLeft:"50px", zIndex:"0"}} className='Card'/>
+              <h1 style={{position:"absolute", marginLeft:"160px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} className='CardText'>Web-дизайн</h1>
+              <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} className='CardText'>Стилизация, идентификация и многое другое решает дизайн. Дизайн это то, что работает. Дизайн и креатив, совмещая которые можно уменьшить вложения в рекламу в несколько раз.</p>
+              <a href="/" style={{position:"absolute",marginLeft:"145px", marginTop:"530px", color:"black", textDecoration:"none", fontSize:"20px", zIndex:"1" }} className='CardText'>Узнать больше></a>
+              <img src={kvadratik} alt="/" style={{position:"relative",marginLeft:"145px", marginTop:"515px", zIndex:"0"}} className='Card'/>
+              <img src={polosochka} alt="/" style={{position:"absolute",marginLeft:"-55px", marginTop:"555px", width:"170px" }}className='Card'/>
+              </Container>
+              </Col>
+              <Col>
+              <img src={shadow} style={{position:"absolute",width:"272px", marginTop:"228px", marginLeft:"79px", rotate:"180deg", zIndex:"-3"}}/>
+              <Container style={{position:"relative"}} className='CardContainer'>
+              <img src={Card5} alt="/" style={{position:"absolute",width:"300px" ,marginTop:"180px", marginLeft:"50px", zIndex:"0"}} className='Card'/>
+              <h1 style={{position:"absolute", marginLeft:"160px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} className='CardText'>Web-дизайн</h1>
+              <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} className='CardText'>Стилизация, идентификация и многое другое решает дизайн. Дизайн это то, что работает. Дизайн и креатив, совмещая которые можно уменьшить вложения в рекламу в несколько раз.</p>
+              <a href="/" style={{position:"absolute",marginLeft:"145px", marginTop:"530px", color:"black", textDecoration:"none", fontSize:"20px", zIndex:"1" }} className='CardText'>Узнать больше></a>
+              <img src={kvadratik} alt="/" style={{position:"relative",marginLeft:"145px", marginTop:"515px", zIndex:"0"}} className='Card'/>
+              <img src={polosochka} alt="/" style={{position:"absolute",marginLeft:"-55px", marginTop:"555px", width:"170px" }}className='Card'/>
+              </Container>
               </Col>
             </Row>
           </Container>

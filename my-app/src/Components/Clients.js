@@ -44,8 +44,8 @@ export default class Clients extends Component {
             <img src={Shy} alt="/"style={{position:"absolute",marginLeft:"-200px", marginTop:"-230px",zIndex:"-1"}} />
             <img src={Mask} alt="/" style={{position:"absolute",marginLeft:"50px", marginTop:"100px", zIndex:"1"}} />
             <img src={BlackFon} alt="/" style={{position:"absolute",marginLeft:"-330px", marginTop:"550px", height:"550px"}} />
-            <img src={nextSlide} alt="/" style={{position:"absolute",marginTop:"638px", marginLeft:"750px", zIndex:"1" }} />
-            <img src={WhiteArrow} alt="/" style={{position:"absolute",marginTop:"648px",marginLeft:"340px" , zIndex:"1" }} />
+            <img src={WhiteArrow} alt="/" style={{position:"absolute",marginTop:"653px", marginLeft:"710px", zIndex:"1", transform:"rotate(180deg)"}} />
+            <img src={WhiteArrow} alt="/" style={{position:"absolute",marginTop:"648px",marginLeft:"380px" , zIndex:"1" }} />
             <Carousel1 />
         </Container>
       </div>
