@@ -2,7 +2,6 @@
     transition: transform 0.2s, height 0.2s;
     height: 3px; /* начальная высота изображения */
     width: 190px; /* фиксированная ширина, если требуется */
-    opacity: 0.5; /* начальная прозрачность */
     transform-origin: bottom; /* трансформация от нижней границы */
 }
 
@@ -19,7 +18,6 @@
     width: 70px; /* фиксированная ширина */
     height: 50px; /* высота квадратика должна совпадать */
     position: relative;
-    opacity: 0.5;
     left: -10px; /* смещение влево */
     transition: width 0.2s, height 0.2s, left 0.2s;
     bottom: 10px;
@@ -29,5 +27,5 @@
 
 .kvadratik img.hovered {
     left: -50px; /* сдвиг, чтобы оставался на месте */
-    transform: scale(0.1, 0.6); /* меняет только высоту */
+    transform: scale(0.1, 0.56); 
 }

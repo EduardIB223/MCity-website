@@ -21,8 +21,9 @@ import BlackDots from './Photo3/klipartz.com - 2020-12-31T140129 2.svg'
 import Svechenie1 from './Photo3/вапшгри 4.svg'
 import Stolb from './Photo3/картинка столб.svg'
 import Cloud2 from './Photo3/цитата м сити.svg'
-import ugol from './Photo3/Vector 83.svg'
-import arrow from './Photo3/Vector.svg'
+import ugol from './Photo3/Group 148.svg'
+import './Animation/ForCardInPricePage.css'
+import shadow from './Animation/UnionForPerehod.svg'
 
 
 export default class PricePage extends Component {
@@ -50,61 +51,94 @@ export default class PricePage extends Component {
         </Container>
         <Container className="ms-50" >
           <Row style={{marginTop:"600px"}} >
-            <Col>
-              <img src={Col1} alt="/" />
-              <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}>от 9.950 грн</h1>
-              <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}>Разработка сайтов</h1>
-              <p style={{position:"absolute", marginTop:"-340px", marginLeft:"30px", fontSize:"20px"}}>Стоимость разработки сайта<br/> зависит от поставленной<br/> задачи проекта</p>
+            <Col >
+            <img src={shadow} style={{position:"absolute",zIndex:"-1"}}  />
+            <Container style={{position:"relative", marginLeft:"-12px"}} className='CardContainer'>
+              <img src={AnotheCol} alt="/" className='Card'/>
+              <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>от 9.950 грн</h1>
+              <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>Разработка сайтов</h1>
+              <p style={{position:"absolute", marginTop:"-340px", marginLeft:"30px", fontSize:"20px"}} className='CardText'>Стоимость разработки сайта<br/> зависит от поставленной<br/> задачи проекта</p>
               <a href="/" style={{position:"absolute", marginTop:"350px", marginLeft:"-350px"}}><img src={buy} /> </a>
+            </Container>
             </Col>
             <Col>
-              <img src={AnotheCol} alt="/"/>
-              <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}>от 25.505 грн</h1>
-              <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}>Разработка<br/>интернет-магазина</h1>
-              <p style={{position:"absolute", marginTop:"-340px", marginLeft:"30px", fontSize:"18px"}}>Мы разрабатываем только <br/>индивидуальные интернет<br/> магазины. без использования<br/> готовых шаблонов и готовых CMS<br/> типа Presta Shop, Shopyfi и других</p>
+            <img src={shadow} style={{position:"absolute",zIndex:"-1"}}  />
+            <Container style={{position:"relative", marginLeft:"-12px"}} className='CardContainer'>
+              <img src={AnotheCol}  className='Card' alt="/"/>
+              <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>от 25.505 грн</h1>
+              <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>Разработка<br/>интернет-магазина</h1>
+              <p style={{position:"absolute", marginTop:"-340px", marginLeft:"30px", fontSize:"18px"}} className='CardText'>Мы разрабатываем только <br/>индивидуальные интернет<br/> магазины. без использования<br/> готовых шаблонов и готовых CMS<br/> типа Presta Shop, Shopyfi и других</p>
               <a href="/" style={{position:"absolute", marginTop:"350px", marginLeft:"-350px"}}><img src={buy} /> </a>
+              </Container>
             </Col>
             <Col>
-              <img src={AnotheCol}alt="/" />
-              <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}>от 6.500 грн</h1>
-              <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}>landing page</h1>
+            <img src={shadow} style={{position:"absolute",zIndex:"-1"}}  />
+            <Container style={{position:"relative", marginLeft:"-12px"}} className='CardContainer'>
+              <img src={AnotheCol}alt="/"  className='Card'/>
+              <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>от 6.500 грн</h1>
+              <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>landing page</h1>
               <p style={{position:"absolute", marginTop:"-350px", marginLeft:"30px", fontSize:"18px"}}>Есть готовые решения, в которые<br/> осталось добавить только ваши<br/> фирменные цвета и наполнить<br/> содержимым. Либо же создадим <br/>уникальный дизайн только для вас</p>
               <a href="/" style={{position:"absolute", marginTop:"350px", marginLeft:"-350px"}}><img src={buy} /> </a>
+              </Container>
             </Col>
           </Row>
           <Row style={{marginTop:"50px"}}>
           <Col>
-              <img src={AnotheCol} alt="/"/>
-              <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}>от 11.850 грн</h1>
-              <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}>Комплексный <br/>онлайн- маркетинг</h1>
-              <p style={{position:"absolute", marginTop:"-340px", marginLeft:"30px", fontSize:"20px"}}>Разработка, анализ, реализация<br/> комплексной стратегии<br/> продвижения. Наша цель  — это<br/> системный рост продаж</p>
+          <img src={shadow} style={{position:"absolute",zIndex:"-1"}}  />
+          <Container style={{position:"relative", marginLeft:"-12px"}} className='CardContainer'>
+              <img src={AnotheCol} className='Card' alt="/"/>
+              <h1 className='Card' style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>от 11.850 грн</h1>
+              <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>Комплексный <br/>онлайн- маркетинг</h1>
+              <p style={{position:"absolute", marginTop:"-340px", marginLeft:"30px", fontSize:"20px"}} className='CardText'>Разработка, анализ, реализация<br/> комплексной стратегии<br/> продвижения. Наша цель  — это<br/> системный рост продаж</p>
               <a href="/" style={{position:"absolute", marginTop:"350px", marginLeft:"-350px"}}><img src={buy} /> </a>
+              </Container>
             </Col>
             <Col>
-              <img src={AnotheCol} alt="/"/>
-              <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}>от 9.150 грн</h1>
-              <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}>Настройка и ведение<br/>Google рекламы</h1>
-              <p style={{position:"absolute", marginTop:"-345px", marginLeft:"30px", fontSize:"20px"}}>Приоритетная реклама в <br/>поисковой выдачи, баннерная<br/> реклама, ремаркетинг, реклама<br/>в YouTube </p>
+            <img src={shadow} style={{position:"absolute",zIndex:"-1"}}  />
+            <Container style={{position:"relative", marginLeft:"-12px"}} className='CardContainer'>
+              <img src={AnotheCol} className='Card' alt="/"/>
+              <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>от 9.150 грн</h1>
+              <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>Настройка и ведение<br/>Google рекламы</h1>
+              <p style={{position:"absolute", marginTop:"-345px", marginLeft:"30px", fontSize:"20px"}} className='CardText'>Приоритетная реклама в <br/>поисковой выдачи, баннерная<br/> реклама, ремаркетинг, реклама<br/>в YouTube </p>
               <a href="/" style={{position:"absolute", marginTop:"350px", marginLeft:"-350px"}}><img src={buy} /> </a>
+              </Container>
             </Col>
-            <Col>
-              <img src={AnotheCol} alt="/"/>
-              <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}>от 7.950 грн</h1>
-              <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}>Продвижение<br/>в социальных сетях </h1>
-              <p style={{position:"absolute", marginTop:"-345px", marginLeft:"30px", fontSize:"20px"}}>Настройка и ведение<br/> таргетированной рекламы,<br/> лидогенерация, комплексное <br/>развитие аккаунта,постинг<br/> актуального контента</p>
+            <Col >
+            <img src={shadow} style={{position:"absolute",zIndex:"-1"}}  />
+            <Container style={{position:"relative", marginLeft:"-12px"}} className='CardContainer'>
+              <img src={AnotheCol}  className='Card' alt="/"/>
+              <h1  className='Card' style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}  className='CardText'>от 7.950 грн</h1>
+              <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}  className='CardText'>Продвижение<br/>в социальных сетях </h1>
+              <p style={{position:"absolute", marginTop:"-345px", marginLeft:"30px", fontSize:"20px"}}  className='CardText'>Настройка и ведение<br/> таргетированной рекламы,<br/> лидогенерация, комплексное <br/>развитие аккаунта,постинг<br/> актуального контента</p>
               <a href="/" style={{position:"absolute", marginTop:"350px", marginLeft:"-350px"}}><img src={buy} /> </a>
+              </Container>
             </Col>
           </Row>
         </Container>
         <Container>
-          <img src={ugol} alt="/"style={{position:"absolute", marginTop:"800px", zIndex:"5"}}/>
-          <img src={arrow}alt="/" style={{position:"absolute", marginTop:"830px",marginLeft:"30px", zIndex:"5"}}/>
-          <h1 style={{position:"absolute", color:"#95DB3A",marginTop:"880px",marginLeft:"30px", zIndex:"5", fontSize:"25px"}}>Web - Дизайн</h1>
-          <h1 style={{position:"absolute", color:"#95DB3A",marginTop:"880px",marginLeft:"530px", zIndex:"5", fontSize:"25px"}}>Создание сайтов</h1>
-          <h1 style={{position:"absolute", color:"#95DB3A",marginTop:"880px",marginLeft:"1030px", zIndex:"5", fontSize:"25px"}}>Продвижение</h1>
-          <p style={{position:"absolute", color:"white",marginTop:"920px",marginLeft:"30px", zIndex:"5", fontSize:"18px"}}>Восприятие информации, стилизация,<br/> идентификация и многое другое<br/> решает дизайн. Дизайн это то, что<br/> работает. Дизайн и креатив, совмещая <br/>которые можно уменьшить вложения в<br/> рекламу в несколько раз.</p>
-          <p style={{position:"absolute", color:"white",marginTop:"920px",marginLeft:"530px", zIndex:"5", fontSize:"18px"}}>Сайт - это один из инструментов<br/> продаж онлайн, большинство<br/> современных технологий диджитал,<br/> напрямую зависит от качества и<br/> функциональности ресурса, которые<br/> мы можем обеспечить.</p>
-          <p style={{position:"absolute", color:"white",marginTop:"920px",marginLeft:"1030px", zIndex:"5", fontSize:"18px"}}>Комплексное продвижение включает<br/> работы по разным направлениям:<br/> SEO, SMM, контент-, email-,<br/> видеомаркетинг и т. д. Это самый<br/> эффективный способ продвижения в<br/> интернете.</p>
+          <Row>
+            <Col >
+            <Container className='CardContainer2'>
+            <img src={ugol} className='Card2' alt="/"style={{position:"absolute", marginTop:"800px", zIndex:"1"}}/>   
+            <h1 className='CardText2' style={{position:"absolute", color:"#95DB3A",marginTop:"880px",marginLeft:"30px", zIndex:"5", fontSize:"25px"}}>Web - Дизайн</h1>
+            <p className='CardText2' style={{position:"absolute", color:"white",marginTop:"920px",marginLeft:"30px", zIndex:"5", fontSize:"18px"}}>Восприятие информации, стилизация,<br/> идентификация и многое другое<br/> решает дизайн. Дизайн это то, что<br/> работает. Дизайн и креатив, совмещая <br/>которые можно уменьшить вложения в<br/> рекламу в несколько раз.</p>
+            </Container>
+            </Col>
+            <Col style={{marginLeft:"20px"}} >
+            <Container className='CardContainer2'>
+            <img src={ugol} className='Card2' alt="/"style={{position:"absolute", marginTop:"800px", zIndex:"5"}}/>
+            <h1 className='CardText2' style={{position:"absolute", color:"#95DB3A",marginTop:"880px",marginLeft:"30px", zIndex:"5", fontSize:"25px"}}>Создание сайтов</h1>
+            <p className='CardText2' style={{position:"absolute", color:"white",marginTop:"920px",marginLeft:"30px", zIndex:"5", fontSize:"18px"}}>Сайт - это один из инструментов<br/> продаж онлайн, большинство<br/> современных технологий диджитал,<br/> напрямую зависит от качества и<br/> функциональности ресурса, которые<br/> мы можем обеспечить.</p>
+            </Container>
+            </Col>
+            <Col style={{marginLeft:"20px"}}>  
+            <Container className='CardContainer2'>
+          <img src={ugol} className='Card2' alt="/"style={{position:"absolute", marginTop:"800px", zIndex:"5"}}/>
+          <h1 className='CardText2' style={{position:"absolute", color:"#95DB3A",marginTop:"880px",marginLeft:"30px", zIndex:"5", fontSize:"25px"}}>Продвижение</h1>
+          <p className='CardText2' style={{position:"absolute", color:"white",marginTop:"920px",marginLeft:"30px", zIndex:"5", fontSize:"18px"}}>Комплексное продвижение включает<br/> работы по разным направлениям:<br/> SEO, SMM, контент-, email-,<br/> видеомаркетинг и т. д. Это самый<br/> эффективный способ продвижения в<br/> интернете.</p>
+          </Container>
+          </Col>
+          </Row>
         <h1 style={{position:"absolute", color:"white", fontSize:"70px", fontWeight:"699", marginTop:"650px", zIndex:"5"}} >Направления</h1>
           <img src={Cloud2}alt="/"style={{position:"absolute",  marginLeft:"175px", marginTop:"320px", zIndex:"3"}} />
           <img src={Svechenie1}alt="/" style={{position:"absolute",  marginLeft:"75px", zIndex:"-3"}}/>

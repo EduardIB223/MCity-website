@@ -1,0 +1,67 @@
+import './Animation/InHeader.css';
+
+  const handleMouseEnter = () => {
+    document.querySelector('.ForPolosochka img').classList.add('hovered');
+    document.querySelector('.kvadratik img').classList.add('hovered');
+    document.querySelector('.start-project').classList.add('hovered-text');
+  };
+
+  const handleMouseLeave = () => {
+    document.querySelector('.ForPolosochka img').classList.remove('hovered');
+    document.querySelector('.kvadratik img').classList.remove('hovered');
+    document.querySelector('.start-project').classList.remove('hovered-text');
+  };
+
+<NavLink style={{ position: "absolute", fontSize: "20px", marginLeft: "585px", }} className="kvadratik" href="/">
+    <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+              <NavLink style={{ position: "absolute", fontSize: "20px", marginLeft: "568px", marginTop: "10px" }} className="ForPolosochka" href="/">
+                <img src={polosochka} alt="Polosochka" />
+              </NavLink>
+              <NavLink
+                style={{ fontSize: "20px", paddingLeft: "45px", fontWeight: "699", zIndex: "1", position: 'relative', display: 'inline-block', textAlign: 'center' }}
+                as={Link}
+                to="/StartProject"
+                className="start-project"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+<div style={{ position: 'relative', display: 'inline-block', textAlign: 'center' }}>
+  Начать проект<span style={{ fontSize: '0.6em' }}> ></span>
+</div>
+
+
+
+.ForPolosochka img {
+    transition: transform 0.2s, height 0.2s;
+    height: 3px; /* начальная высота изображения */
+    width: 190px; /* фиксированная ширина, если требуется */
+    opacity: 0.5; /* начальная прозрачность */
+    transform-origin: bottom; /* трансформация от нижней границы */
+}
+
+.ForPolosochka img.hovered {
+    transform: scaleY(9); /* меняет только высоту */
+    height: 3px; /* высота при наведении */
+}
+
+.start-project:hover {
+    color: white; /* цвет текста при наведении */
+}
+
+.kvadratik img {
+    width: 70px; /* фиксированная ширина */
+    height: 50px; /* высота квадратика должна совпадать */
+    position: relative;
+    opacity: 0.5;
+    left: -10px; /* смещение влево */
+    transition: width 0.2s, height 0.2s, left 0.2s;
+    bottom: 10px;
+    left: -20px; /* сдвиг, чтобы оставался на месте */
+    transform-origin: center; /* трансформация от нижней границы */
+}
+
+.kvadratik img.hovered {
+    left: -50px; /* сдвиг, чтобы оставался на месте */
+    transform: scale(0.1, 0.56); 
+}

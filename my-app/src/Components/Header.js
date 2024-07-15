@@ -80,10 +80,11 @@ const Header = () => {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <div style={{ position: 'relative', display: 'inline-block', textAlign: 'center' }}>
-                  Начать проект>
-                  <img src={tochka} style={{ ...getTochkaStyle("/StartProject"), position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop: '5px' }} alt="Tochka" />
-                </div>
+<div style={{ position: 'relative', display: 'inline-block', textAlign: 'center' }}>
+  Начать проект<span style={{ fontSize: '0.6em' }}> ></span>
+  <img src={tochka} style={{ ...getTochkaStyle("/StartProject"), position: 'absolute', left: '50%', transform: 'translateX(-50%)', marginTop: '5px' }} alt="Tochka" />
+</div>
+
               </NavLink>
             </Nav>
           </Navbar.Collapse>

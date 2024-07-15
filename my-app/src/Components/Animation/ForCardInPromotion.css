@@ -1,0 +1,52 @@
+.ContainerCard {
+    position: relative;
+    margin-left: -20px;
+    transition: 0.4s;
+}
+
+.CardImage {
+    position: absolute;
+    margin-top: -250px;
+    margin-left: 8px;
+    opacity: 0; /* Изначально прозрачная */
+    transition: 0.4s;
+}
+
+.CardText {
+    position: absolute;
+    transition: 0.4s;
+}
+
+.ContainerCard:hover .CardImage, 
+.ContainerCard:hover .CardText {
+    opacity: 1; /* Прозрачность 1 при наведении */
+}
+.ContainerCard:hover{
+    margin-top:-25px;
+}
+.ContainerCard2 {
+    position: relative;
+    margin-left: -20px;
+    transition: 0.4s;
+}
+
+.CardImage2 {
+    position: absolute;
+    margin-top: -250px;
+    margin-left: 8px;
+    opacity: 0; /* Изначально прозрачная */
+    transition: 0.4s;
+}
+
+.CardText2 {
+    position: absolute;
+    transition: 0.4s;
+}
+
+.ContainerCard2:hover .CardImage2, 
+.ContainerCard2:hover .CardText2 {
+    opacity: 1; /* Прозрачность 1 при наведении */
+}
+.ContainerCard2:hover{
+    margin-top:-35px;
+}

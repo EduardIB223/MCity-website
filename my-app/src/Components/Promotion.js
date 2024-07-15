@@ -19,6 +19,8 @@ import BlackFon from './Photo8/Rectangle 292.svg'
 import eye from './Photo8/опа.svg'
 import Footer from './Footer'
 import UndLine from './Photo7/Vector 180.svg'
+import './Animation/ForCardInPromotion.css'
+import CardAnim from './Animation/Group 143.svg'
 
 export default class Promotion extends Component {
   render() {
@@ -37,20 +39,31 @@ export default class Promotion extends Component {
         </Container>
         <Container>
         <Row style={{position:"relative",marginTop:"600px", marginLeft:"80px"}}>
-                <Col>
-                <img src={Card1} />
-                <h1 style={{position:"absolute", marginTop:"-300px",marginLeft:"80px", fontSize:"24px", fontWeight:"699"}}>Посещение сайта</h1>
-                <p style={{position:"absolute", marginTop:"-250px",marginLeft:"40px", fontSize:"18px", textAlign:"center"}}>Объявления, ведущие на ваш сайт,<br/> помогут увеличить количество<br/> онлайн-продаж, бронирований или<br/> подписок на рассылку</p>
+        <Col>
+    <img src={Card2} style={{marginTop: "70px"}} />
+    <Container style={{position: "relative", marginLeft: "-20px"}} className='ContainerCard'>
+        <img src={CardAnim} style={{position: "absolute", marginTop: "-250px", marginLeft: "8px"}} className='CardImage'/>
+        <h1 style={{position: "absolute", marginTop: "-210px", marginLeft: "80px", fontSize: "24px", fontWeight: "699"}} className='CardText'>Посещение сайта</h1>
+        <p style={{position: "absolute", marginTop: "-160px", marginLeft: "40px", fontSize: "18px", textAlign: "center"}} className='CardText'>
+            Объявления, ведущие на ваш сайт,<br/> помогут увеличить количество<br/> онлайн-продаж, бронирований или<br/> подписок на рассылку
+        </p>
+    </Container>
+</Col>
+                <Col style={{marginTop:"70px"}}>
+                <img src={Card2} />
+                <Container style={{position:"relative", marginLeft:"-20px"}} className='ContainerCard' >
+                <img src={CardAnim} style={{position:"absolute", marginTop:"-250px", marginLeft:"9px"}} className='CardImage'/>
+                <h1  style={{position:"absolute", marginTop:"-200px",marginLeft:"80px", fontSize:"24px", fontWeight:"699", textAlign:"center"}} className='CardText'>Телефонные звонки</h1>
+                <p  style={{position:"absolute", marginTop:"-150px",marginLeft:"40px", fontSize:"18px", textAlign:"center"}} className='CardText'>Объявления с номером телефона и<br/> кнопкой "Позвонить" помогают<br/> повысить количество звонков и<br/> текущих клиентов</p>
+                </Container>
                 </Col>
                 <Col style={{marginTop:"70px"}}>
                 <img src={Card2} />
-                <h1  style={{position:"absolute", marginTop:"-200px",marginLeft:"60px", fontSize:"24px", fontWeight:"699", textAlign:"center"}}>Телефонные звонки</h1>
-                <p  style={{position:"absolute", marginTop:"-150px",marginLeft:"40px", fontSize:"18px", textAlign:"center"}}>Объявления с номером телефона и<br/> кнопкой "Позвонить" помогают<br/> повысить количество звонков и<br/> текущих клиентов</p>
-                </Col>
-                <Col style={{marginTop:"70px"}}>
-                <img src={Card2} />
-                <h1 style={{position:"absolute", marginTop:"-200px",marginLeft:"50px", fontSize:"24px", fontWeight:"699", textAlign:"center"}}>Увелечение  посетителей</h1>
-                <p style={{position:"absolute", marginTop:"-160px",marginLeft:"40px", fontSize:"18px", textAlign:"center"}}>Объявления помогут<br/> пользователям найти вашу<br/> компанию на карте – и привлекут<br/> больше клиентов в ваш магазин<br/> или офис.</p>
+                <Container style={{position:"relative", marginLeft:"-20px"}} className='ContainerCard2' >
+                <img src={CardAnim} style={{position:"absolute", marginTop:"-235px", marginLeft:"8px"}} className='CardImage2'/>
+                <h1 style={{position:"absolute", marginTop:"-200px",marginLeft:"50px", fontSize:"24px", fontWeight:"699", textAlign:"center"}} className='CardText2'>Увелечение  посетителей</h1>
+                <p style={{position:"absolute", marginTop:"-170px",marginLeft:"40px", fontSize:"18px", textAlign:"center"}} className='CardText2'>Объявления помогут<br/> пользователям найти вашу<br/> компанию на карте – и привлекут<br/> больше клиентов в ваш магазин<br/> или офис.</p>
+                </Container>
                 </Col>
             </Row>
         </Container>
