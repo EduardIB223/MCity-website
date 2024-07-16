@@ -14,6 +14,7 @@ import Cloud4 from './Photo/Group 20.svg';
 const Footer = ({ style }) => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState('');
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     setActiveLink(location.pathname);
@@ -54,9 +55,6 @@ const Footer = ({ style }) => {
         <p style={{ position: 'absolute', marginLeft: '700px', fontSize: "16px", marginTop: "147px" }}>Телефон</p>
         <input type='text' placeholder='Анна' style={{ position: "absolute", marginLeft: "450px", marginTop: "170px", width: "228px", height: "40px", border: "0", backgroundColor: "rgb(221, 221, 221)" }}></input>
         <input type='text' placeholder='+7(949)123-32-21' style={{ position: "absolute", marginLeft: "690px", marginTop: "170px", width: "228px", height: "40px", border: "0", backgroundColor: "rgb(221, 221, 221)" }}></input>
-        <a href='/' style={{ position: "absolute", marginLeft: "1000px", marginTop: "170px", fontSize: "20px", textDecoration: "none", color: "black", fontWeight: "bold" }}>Отправить></a>
-        <img src={kvadratik} alt="/" style={{ position: "absolute", marginLeft: "1000px", marginTop: "156px", fontSize: "20px", zIndex: "-1" }} />
-        <img src={polosochka} alt="/" style={{ position: "absolute", marginLeft: "990px", marginTop: "195px", fontSize: "20px", width: "140px", zIndex: "-1" }} />
         <img src={Lineya} alt="/" style={{ position: "absolute", marginTop: "286px", width: "1920px", marginLeft: "-310px", zIndex: "2" }} />
         <img src={Fon2} alt="/" style={{ position: "absolute", marginTop: "290px", width: "1920px", marginLeft: "-310px" }} />
         <p style={{ position: "absolute", marginTop: "460px", fontSize: "16px", marginLeft: "775px", textAlign: "right" }}>
@@ -69,6 +67,42 @@ const Footer = ({ style }) => {
         <h1 style={{ position: "absolute", textAlign: "left", marginTop: "495px", fontSize: "20px", marginLeft: "124px", fontFamily: "Raleway", fontWeight: 1000, lineHeight: "35.2px", letterSpacing: "0.02em" }}>+7(949)123-32-21</h1>
         <h1 style={{ position: "absolute", textAlign: "left", marginTop: "495px", fontSize: "20px", marginLeft: "350px", fontFamily: "Raleway", fontWeight: 1000, lineHeight: "35.2px", letterSpacing: "0.02em" }}>example@gmail.com</h1>
       </Container>
+      <Container className="ms-50">
+      <NavLink
+    style={{ position: "absolute", fontSize: "20px", marginLeft: "983px", marginTop: "70px", zIndex: "9999" }} 
+    className={`kvadratik ${hovered ? 'hovered' : ''}`}
+    href="/"
+>
+    <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+    style={{ position: "absolute", fontSize: "20px", marginLeft: "948px", marginTop: "88px", zIndex: "9999" }} 
+    className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+    href="/"
+>
+    <img src={polosochka} alt="Polosochka" />
+</NavLink>
+<NavLink
+    to="/"
+    style={{
+        position: 'absolute',
+        display: 'inline-block',
+        textAlign: 'center',
+        marginTop: "73px",
+        marginLeft: "980px",
+        zIndex: "9999", 
+        fontSize: '1.2em',
+        fontWeight: 'bold',
+        color: hovered ? 'white' : 'black',
+        whiteSpace: 'nowrap'
+    }}
+    className="start-project"
+    onMouseEnter={() => setHovered(true)}
+    onMouseLeave={() => setHovered(false)}
+>
+    Отправить<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}> ></span>
+</NavLink >
+</Container>
       <Navbar collapseOnSelect expand="md">
         <Container className="ms-50" style={{ position: "relative", zIndex: "10", marginTop: "50px" }}>
           <Navbar.Brand as={Link} to="/" style={{ position: "absolute", left: "1000px" }}>

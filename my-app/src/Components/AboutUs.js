@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, NavLink, Navbar, Nav } from 'react-bootstrap'
 import fon from './Photo2/Rectangle 10.svg'
 import Cloud1 from './Photo2/klipartz.com - 2020-12-29T161810 1.svg'
 import BGHand from './Photo2/klipartz.com - 2020-12-31T140129 2.svg'
@@ -47,9 +47,20 @@ import heart from './Photo2/сердце картинка.svg'
 import Mail from './Photo2/почтомат картинка.svg'
 import SendMail from './Photo2/Group 66.svg'
 import BlackLine from './Photo2/Rectangle 126.svg'
+import kvadratik from './Photo/Rectangle 12.svg'
+import polosochka from './Photo/Rectangle 11.svg'
 
 export default class AboutUs extends Component {
+  state = {
+    hovered: false,
+  };
+
+  setHovered = (value) => {
+    this.setState({ hovered: value });
+  };
+
   render() {
+    const { hovered } = this.state;
     return (
         <>
       <div>
@@ -115,9 +126,61 @@ export default class AboutUs extends Component {
                 передает очень важную информацию!</h1>
                 <p style={{position:"absolute", marginLeft:"442px", marginTop:"1750px", zIndex:"1", fontSize:"20px"}}>Привлекательный бренд и <br/>великолепный веб-сайт <br/>не принесут пользы <br/>вашему бизнесу, если о<br/> вас никто не знает</p>
                 <p style={{position:"absolute", marginLeft:"792px", marginTop:"1750px", zIndex:"1", fontSize:"20px"}}>По этому мы продвигаем ваши продукты и<br/> контент, чтобы расширить охват вашего бренда,<br/> привлечь внимание, увеличить трафик и<br/> завоевать авторитет и доверие в поисковых<br/> системах. </p>
-                <a href="/" style={{position:"absolute", marginTop:"1920px" , marginLeft:"1100px"}}><img src={start} /></a>
                 <img src={BlackStick} style={{position:"relative", marginLeft:"-300px", marginTop:"2050px", zIndex:"-1"}} />
+                <NavLink
+  to="/" 
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginLeft: hovered ? "1040px" : "1075px", // Смещение вправо при наведении
+    marginTop: hovered ? "-137px" : "-145px",
+    zIndex: "5"
+  }}
+  className={`kvadratik1 ${hovered ? 'hovered' : ''}`}
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+
+<NavLink
+  to="/about" 
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "1075px",
+    marginTop: "-130px",
+    zIndex: "5",
+    transformOrigin: "center" // правильно написан
+  }}
+  className={`ForPolosochka1 ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочока" />
+</NavLink>
+
+<NavLink
+  to="/AboutUs" 
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'left',
+    marginTop: "1932px",
+    marginLeft: "384px",
+    zIndex: "11",
+    fontSize: '1.0em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Начать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;</span><br/>продвижение
+</NavLink>
+
+
             </Container>
+            
             <Container className="ms-50">
                 <img src={Cloud4} style={{position:"absolute",marginLeft:"400px", marginTop:"-100px"}}/>
                 <img src={fonGreen} style={{position:"absolute", marginLeft:"-300px", zIndex:"-1"}}/>

@@ -21,7 +21,7 @@ const footerStyles = {
   '/Clients': { marginTop: '387px' },
   '/StartProject': { marginTop: '487px' },
   '/WebDesigne': { marginTop: '661px' },
-  '/Promotion': { marginTop: '678px' }
+  '/Promotion': { marginTop: '3175px' }
 };
 
 function Content() {

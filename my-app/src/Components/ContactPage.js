@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, NavLink } from 'react-bootstrap';
 import fon1 from './Photo4/Rectangle 10.svg';
 import cloud1 from './Photo4/klipartz.com - 2020-12-29T161810 4.svg';
 import cloud2 from './Photo4/klipartz.com - 2020-12-29T161810 3.svg';
@@ -9,16 +9,28 @@ import Cloud3 from './Photo4/klipartz.com - 2020-12-29T161810 2.svg';
 import Globus from './Photo4/картинка п р.svg';
 import Palka from './Photo4/Rectangle 144.svg';
 import Cartochka from './Photo4/карточка.svg';
-import send from './Photo4/отправить .svg';
 import separatedLine from './Photo4/Vector 91.svg';
 import BlackBG from './Photo4/Rectangle 146.svg';
 import Star from './Photo4/Star 3.svg';
+import kvadratik from './Photo/Rectangle 12.svg';
+import polosochka from './Photo/Rectangle 11.svg';
+import './Animation/AktLink.css';
 
-export default class ContactPage extends Component {
+class ContactPage extends Component {
+  state = {
+    hovered: false
+  };
+
+  setHovered = (value) => {
+    this.setState({ hovered: value });
+  };
+
   render() {
+    const { hovered } = this.state;
+
     return (
       <div>
-        <Container className='ms-50'>
+        <Container>
           <img src={fon1} alt="/" style={{ position: "absolute", marginLeft: "-300px" }} />
           <img src={cloud1} alt="/" style={{ position: "absolute", marginLeft: "-300px", marginTop: "270px", zIndex: "1" }} />
           <img src={cloud2} alt="/" style={{ position: "absolute", marginLeft: "500px", marginTop: "0px", zIndex: "1" }} />
@@ -39,7 +51,50 @@ export default class ContactPage extends Component {
           <input type="text" placeholder='@' style={{ position: "absolute", width: "398px", height: "53px", fontSize: "25px", marginTop: "820px", marginLeft: "55px", zIndex: "10", border: "0", backgroundColor: "rgb(221, 221, 221)" }}></input>
           <p style={{ position: "absolute", fontSize: "25px", marginTop: "880px", marginLeft: "65px", zIndex: "10" }}>Сообщение (необязательно)</p>
           <input type="text" placeholder='Расскажите о вашем проекте' style={{ position: "absolute", width: "398px", height: "228px", fontSize: "25px", marginTop: "940px", marginLeft: "55px", zIndex: "10", border: "0", backgroundColor: "rgb(221, 221, 221)" }}></input>
-          <a href="/"><img src={send} style={{ position: "absolute", marginTop: "1200px", marginLeft: "200px", zIndex: "11" }} /></a>
+
+
+
+
+
+          <NavLink
+            style={{ position: "absolute", fontSize: "20px", marginLeft: "203px", marginTop: "1200px", zIndex: "5" }}
+            className={`kvadratik ${hovered ? 'hovered' : ''}`}
+            href="/"
+          >
+            <img src={kvadratik} alt="Kvadratik" />
+          </NavLink>
+          <NavLink
+            style={{ position: "absolute", fontSize: "20px", marginLeft: "168px", marginTop: "1218px", zIndex: "5" }}
+            className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+            href="/"
+          >
+            <img src={polosochka} alt="Polosochka" />
+          </NavLink>
+          <NavLink
+            to="/"
+            style={{
+              position: 'absolute',
+              display: 'inline-block',
+              textAlign: 'center',
+              marginTop: "1200px",
+              marginLeft: "200px",
+              zIndex: "11",
+              fontSize: '1.5em',
+              fontWeight: 'bold',
+              color: hovered ? 'white' : 'black'
+            }}
+            className="start-project"
+            onMouseEnter={() => this.setHovered(true)}
+            onMouseLeave={() => this.setHovered(false)}
+          >
+            Отправить<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}> ></span>
+          </NavLink>
+
+
+
+
+
+
           <h1 style={{ position: "absolute", marginTop: "750px", marginLeft: "680px", fontSize: "25px" }} >Адрес:</h1>
           <p style={{ position: "absolute", marginTop: "780px", marginLeft: "680px", fontSize: "25px", fontWeight: "699" }}>ул. Архитектора Нильсена, <br />60, офис 111А</p>
           <img src={separatedLine} alt="/" style={{ position: "absolute", marginTop: "880px", marginLeft: "570px" }} />
@@ -77,3 +132,5 @@ export default class ContactPage extends Component {
     );
   }
 }
+
+export default ContactPage;

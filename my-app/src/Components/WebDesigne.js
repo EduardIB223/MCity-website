@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Carousel, CarouselItem, CarouselCaption, NavLink } from 'react-bootstrap'
 import Shapka from './Photo7/космонавт картинка.svg'
 import Cloud1 from './Photo7/цитата м сити.svg'
 import Spaceship from './Photo7/картнка кораблик.svg'
@@ -19,10 +19,20 @@ import Alien from './Photo7/гуманоид.svg'
 import BlackBG from './Photo7/Rectangle 292.svg'
 import UFO from './Photo7/ufo-неопознанный-етающий-объект-и-юстрация-вектора-етающей-таре-ки-66718448 3.svg'
 import UndLine from './Photo7/Vector 180.svg'
-import Footer from './Footer'
+import kvadratik from './Photo/Rectangle 12.svg';
+import polosochka from './Photo/Rectangle 11.svg';
 
 export default class WebDesigne extends Component {
-  render() {
+    state = {
+        hovered: false,
+      };
+    
+      setHovered = (value) => {
+        this.setState({ hovered: value });
+      };
+    
+      render() {
+        const { hovered } = this.state;
     return (
         <>
       <div>
@@ -41,19 +51,156 @@ export default class WebDesigne extends Component {
                     <img src={Card1} alt="/" />
                     <h1 style={{position:"absolute", fontSize:"25px", marginTop:"-310px", marginLeft:"20px"}}>Индивидуальный дизайн</h1>
                     <p style={{position:"absolute", fontSize:"18px", marginTop:"-250px", marginLeft:"20px"}}>Реализация любых нестандартных и<br/> стандартных веб-решений в<br/> области дизайна и функционала<br/> ресурса. Создание вашего бренда и<br/> узнаваемости, повышение имиджа<br/> компании в глазах покупателей.</p>
-                    <a href="/"><img src={Order} style={{position:"absolute",marginTop:"470px", marginLeft:"-350px"}} /></a>
+
+
+
+                    <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginTop: hovered ? "-46px" : "-39px",
+    marginLeft: hovered ? "48px" : "35px", // Смещение вправо при наведении
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "13px", // Зафиксировано
+    marginTop: "-29px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "480px",
+    marginLeft: "-325px",
+    zIndex: "11",
+    fontSize: '1.3em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Заказать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;></span>
+</NavLink>
+
+
                     </Col>
                     <Col>
                     <img src={Card2} alt="/" />
                     <h1 style={{position:"absolute", fontSize:"25px", marginTop:"-300px", marginLeft:"20px"}}>Редизайн сайта</h1>
                     <p style={{position:"absolute", fontSize:"18px", marginTop:"-240px", marginLeft:"20px"}}>Если имеется неудовлетворение, но<br/> техническая часть годная (это может<br/>определить технический специалист <br/> после анализа), то достаточно будет <br/> провести редизайн сайта <br/> (ребрендинг сайта) для его <br/>улучшения.</p>
-                    <a href="/"><img src={Order} style={{position:"absolute",marginTop:"470px", marginLeft:"-350px"}} /></a>
+                    <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginTop: hovered ? "-34px" : "-28px",
+    marginLeft: hovered ? "48px" : "43px", // Смещение вправо при наведении
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "13px", // Зафиксировано
+    marginTop: "-16px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "480px",
+    marginLeft: "-325px",
+    zIndex: "11",
+    fontSize: '1.3em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Заказать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;></span>
+</NavLink>
                     </Col>
                     <Col>
                     <img src={Card3} alt="/" />
                     <h1 style={{position:"absolute", fontSize:"25px", marginTop:"-290px", marginLeft:"20px"}}>Создание логотипа</h1>
                     <p style={{position:"absolute", fontSize:"18px", marginTop:"-230px", marginLeft:"20px"}}>С помощью логотипа – мы донесем до<br/> целевой аудитории компании ее<br/> идею.Это то что позволяет любому<br/> человеку сразу, с первого же взгляда<br/> понять, в какой сфере работает<br/> организация и каковы ее <br/> особенности.</p>
-                    <a href="/"><img src={Order} style={{position:"absolute",marginTop:"470px", marginLeft:"-350px"}} /></a>
+                    <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginTop: hovered ? "-20px" : "-16px",
+    marginLeft: hovered ? "48px" : "43px", // Смещение вправо при наведении
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "13px", // Зафиксировано
+    marginTop: "-3px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "480px",
+    marginLeft: "-325px",
+    zIndex: "11",
+    fontSize: '1.3em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Заказать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;></span>
+</NavLink>
                     </Col>
                 </Row>
             </Container>

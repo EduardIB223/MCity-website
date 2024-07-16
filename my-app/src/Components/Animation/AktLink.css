@@ -1,0 +1,42 @@
+.ForPolosochka img {
+    transition: transform 0.3s, height 0.3s;
+    transform-origin: bottom; /* трансформация от нижней границы */
+    width: 190px; /* фиксированная ширина, если требуется */
+}
+.ForPolosochka.hovered img {
+    transform: scaleY(10); /* оставляем масштабирование неизменным */
+}
+.start-project:hover {
+    color: white; /* цвет текста при наведении */
+}
+.kvadratik img {
+    transition: width 0.3s, height 0.3s, left 0.3s;
+    transform-origin: center; /* трансформация от центра */
+}
+.kvadratik.hovered img {
+    transform: scale(0.1, 0.6); /* если это нужное масштабирование */
+    left: -71px; /* сдвиг, чтобы оставался на месте */
+    top: -5px;
+}
+.hovered {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  .ForPolosochka1 img {
+    transition: transform 0.3s, height 0.3s;
+    transform-origin: center; /* трансформация от нижней границы */
+    width: 190px; /* фиксированная ширина, если требуется */
+}
+.ForPolosochka1.hovered img {
+    transform: scaleY(15); /* оставляем масштабирование неизменным */
+}
+.kvadratik1 img {
+    transition: width 1s, height 0.3s, left 0.3s;
+    transform-origin: center; /* трансформация от центра */
+}
+.kvadratik1.hovered img {
+    transform: scale(0.1, 1); /* если это нужное масштабирование */
+    left: -171px; /* сдвиг, чтобы оставался на месте */
+    top: -5px;
+    transition: width 1s, height 0.3s, left 1s !important;
+}

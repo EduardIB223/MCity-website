@@ -1,5 +1,5 @@
 .ForPolosochka img {
-    transition: transform 0.2s, height 0.2s;
+    transition: transform 0.3s, height 0.3s;
     height: 3px; /* начальная высота изображения */
     width: 190px; /* фиксированная ширина, если требуется */
     transform-origin: bottom; /* трансформация от нижней границы */
@@ -19,7 +19,7 @@
     height: 50px; /* высота квадратика должна совпадать */
     position: relative;
     left: -10px; /* смещение влево */
-    transition: width 0.2s, height 0.2s, left 0.2s;
+    transition: width 0.3s, height 0.3s, left 0.3s;
     bottom: 10px;
     left: -20px; /* сдвиг, чтобы оставался на месте */
     transform-origin: center; /* трансформация от нижней границы */
@@ -33,10 +33,4 @@
 .hovered {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
-  }
-  
-  .hovered-text {
-    color: #ff6347;
-    transition: color 0.3s ease-in-out;
-  }
-  
+}

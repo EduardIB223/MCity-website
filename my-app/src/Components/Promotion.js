@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Carousel, CarouselItem, CarouselCaption, NavLink } from 'react-bootstrap'
 import fon from './Photo8/Group 143.svg'
 import separatedLine from './Photo8/Rectangle 285.svg'
 import Cloud from './Photo8/цитата.svg'
@@ -21,10 +21,21 @@ import Footer from './Footer'
 import UndLine from './Photo7/Vector 180.svg'
 import './Animation/ForCardInPromotion.css'
 import CardAnim from './Animation/Group 143.svg'
+import kvadratik from './Photo/Rectangle 12.svg';
+import polosochka from './Photo/Rectangle 11.svg';
 
 export default class Promotion extends Component {
+  state = {
+    hovered: false,
+  };
+
+  setHovered = (value) => {
+    this.setState({ hovered: value });
+  };
+
   render() {
-    return (
+    const { hovered } = this.state;
+return (
       <div>
         <Container>
             <img src={fon} style={{position:"relative", marginLeft:"-300px", marginTop:"-80px"}}/>
@@ -74,16 +85,105 @@ export default class Promotion extends Component {
 </p>
         <img src={men} style={{position:"absolute", marginLeft:"800px", marginTop:"100px"}} />
         <img src={Tochki} style={{position:"absolute", marginLeft:"1300px", marginTop:"-300px"}}/>
-       <a href=""><img src={buy} style={{position:"relative", marginTop:"430px", marginLeft:"80px"}} /></a>
+        <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginTop: hovered ? "421px" : "418px",
+    marginLeft: hovered ? "110px" : "98px", // Смещение вправо при наведении
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "75px", // Зафиксировано
+    marginTop: "439px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "425px",
+    marginLeft: "105px",
+    zIndex: "11",
+    fontSize: '1.3em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Заказать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;></span>
+</NavLink>
         </Container>
+        <Container style={{ marginTop: "480px" }}>
         <Container>
           <img src={man2} style={{position:"absolute", marginTop:"140px"}} />
           <img src={Tochki2}style={{position:"absolute", marginTop:"345px", marginLeft:"-320px", zIndex:"-1"}} />
           <h1 style={{position:"absolute", marginLeft:"700px", marginTop:"100px", fontSize:"72px", fontWeight:"699"}}>Продвижение инстаграм</h1>
           <p style={{position:"absolute", marginLeft:"700px", marginTop:"320px", fontSize:"18px"}}>SMM продвижение идеально подходит для<br/> рекламы нового бренда или нового<br/> продукта/услуги, на которые еще нет спроса в<br/> поисковых системах, и настроить контекстную<br/> рекламу нет возможности, в связи с отсутствием<br/> поисков по нужным ключевым словам. В случае,<br/> если на Ваш товар или услугу есть спрос в<br/> поисковых системах, то SMM необходимо<br/> использовать в качестве дополнительного метода<br/> привлечения целевой аудитории к SEO<br/> продвижению и к рекламе в Google Adwords.</p>
-          <a href=""><img src={buy} style={{position:"relative",  marginLeft:"700px", marginTop:"650px"}} /></a>
+          <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginTop: hovered ? "642px" : "642px",
+    marginLeft: hovered ? "735px" : "723px", // Смещение вправо при наведении
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "700px", // Зафиксировано
+    marginTop: "659px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "645px",
+    marginLeft: "730px",
+    zIndex: "11",
+    fontSize: '1.3em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Заказать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;></span>
+</NavLink>
         </Container>
-        <Container>
+        <Container style={{ marginTop: "750px", position:"absolute"}}>
           <h1 style={{position:"absolute", marginLeft:"70px", marginTop:"150px", fontSize:"72px", fontWeight:"699"}}>Баннерная <br/>
           реклама</h1>
           <p style={{position:"absolute", marginLeft:"75px", marginTop:"350px", fontSize:"18px"}}>Это показ рекламных объявлений в виде <br/> графических изображений, анимированных <br/> баннеров или реклама в виде видео ряда (видео  <br/>ролик и короткое текстовое описание) на сайтах <br/> партнерах Гугл.
@@ -92,15 +192,59 @@ export default class Promotion extends Component {
           <p style={{position:"absolute", marginLeft:"75px", marginTop:"555px", fontSize:"18px"}}>намерение пользователя. Имеется виду<br/> потребность человека в том или ином продукте<br/> на момент показа рекламы.
           </p>
           <img src={man3} style={{position:"absolute", marginLeft:"575px", marginTop:"-25px"}}/>
-          <a href=""><img src={buy} style={{position:"relative",  marginLeft:"75px", marginTop:"680px"}} /></a>
+          <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginTop: hovered ? "662px" : "662px",
+    marginLeft: hovered ? "110px" : "98px", // Смещение вправо при наведении
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "75px", // Зафиксировано
+    marginTop: "679px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "665px",
+    marginLeft: "105px",
+    zIndex: "11",
+    fontSize: '1.3em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Заказать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;></span>
+</NavLink>
         </Container>
-        <Container>
+        <Container style={{ marginTop: "1450px", position:"absolute"}}>
           <img src={man4} style={{position:"absolute", marginLeft:"100px", marginTop:"50px"}}/>
           <h1 style={{position:"absolute", marginLeft:"700px", marginTop:"100px", fontSize:"48px", fontWeight:"699"}}>Контекстная<br/> реклама - лучший<br/> способ увеличить<br/> видимость сайта</h1>
           <p style={{position:"absolute", marginLeft:"700px", marginTop:"350px", fontSize:"18px"}}>Гуманоид здесь чтобы поведает нам одну<br/> очень важную истину, он знает ответ на наш<br/> сложный вопрос )</p>
           <img src={car} style={{position:"relative", marginLeft:"1100px", marginTop:"260px"}} />
         </Container>
-        <Container>
+        <Container style={{ marginTop: "2018px", position:"absolute"}}>
           <img src={BlackFon}style={{position:"absolute", marginTop:"-85px", marginLeft:"-300px"}} />
           <Row style={{position:"absolute", marginLeft:"110px", marginTop:"-40px"}} >
             <Col>
@@ -119,6 +263,7 @@ export default class Promotion extends Component {
             <p style={{position:"absolute", fontSize:"18px",marginTop:"30px",color:"white", width:"400px"}}> Быстрая отдача вложенных инвестиций. Действие контекстной рекламы начинается сразу после ее размещения. </p>
             </Col>
           </Row>
+        </Container>
         </Container>
       </div>
     )

@@ -66,6 +66,18 @@ const Header = () => {
                   </div>
                 </NavLink>
               ))}
+
+
+
+
+
+
+
+
+
+
+
+
 <NavLink style={{ position: "absolute", fontSize: "20px", marginLeft: "585px", }} className="kvadratik" href="/">
     <img src={kvadratik} alt="Kvadratik" />
 </NavLink>
@@ -86,6 +98,24 @@ const Header = () => {
 </div>
 
               </NavLink>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </Nav>
           </Navbar.Collapse>
         </Container>

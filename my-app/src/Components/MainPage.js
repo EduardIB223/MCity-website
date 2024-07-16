@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Carousel2 from './Carousel2'
-import { Container, Carousel, CarouselItem, CarouselCaption} from 'react-bootstrap';
+import { Container, Carousel, CarouselItem, CarouselCaption, NavLink} from 'react-bootstrap';
 import fon from './Photo/Rectangle 10.svg';
 import Bukva from './Photo/img_1_491_94126f.svg';
 import Okruzhnost from './Photo/Ellipse 2.svg';
@@ -54,16 +54,20 @@ import QuotMarks from './Photo/Group (1).svg'
 import Carousel1 from './Carousel1'
 import WhiteArrow from './Photo/отправить.svg'
 import './Animation/ForMainPage.css'
-export const FontLink = () => {
-  return (
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
-  );
-};
-export default class main extends Component {
+
+
+
+class MainPage extends Component {
+  state = {
+    hovered: false,
+  };
+
+  setHovered = (value) => {
+    this.setState({ hovered: value });
+  };
+
   render() {
+    const { hovered } = this.state;
     return (
         <>
       <div>
@@ -119,14 +123,71 @@ export default class main extends Component {
           <img src={CherniyFon} alt="/" style={{ position: "relative", bottom: "630px", right: "280px", zIndex: "2" }} />
           <img src={ChernayaDroch} alt="/" style={{ position: "relative", bottom: "631px", right: "281px", zIndex: "2" }} />
           <h1 style={{ position: "absolute", marginTop: "-750px", marginLeft: "40px", color: "white", zIndex: "3", fontSize: "90px" }}>Кто мы?</h1>
+
+
+
+
+
+
+
+
+          <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginLeft: "712px",
+    marginTop: hovered ? "-697px" : "-700px",
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "678px", // Зафиксировано
+    marginTop: "-680px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "-570px",
+    marginLeft: "-225px",
+    zIndex: "11",
+    fontSize: '1.1em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Узнать больше<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}> ></span>
+</NavLink>
+
+
+
+
+
           <p style={{ fontSize: "18px", width: "600px", position: "relative", marginTop: "-990px", marginLeft: "700px" }}>Веб-дизайн студия MariupolCity.com - стабильно работающая на <br /> рынке IT-услуг компания, которой реализовано более 200 <br />интернет-проектов для наших Клиентов.
             <br /><br />
             Наши сотрудники обладают тремя важными качествами - <br /> честностью, ответственностью, стремлением быть лучшими в своем деле. Эти качества являются залогом прочных и долгосрочных отношений с нашими Клиентами.</p>
-          <a style={{ position: "relative", marginLeft: "720px", fontSize: "20px", color: "black", textDecoration: "none", top: "60px" }} href='/'> Узнать больше > </a>
         </Container>
         <Container className="ms-50">
-            <img src={ZelenayaDroch} alt="/" style={{position:"relative", marginTop:"90px", marginLeft:"-280px", zIndex:"-4"}} />
-            <h1 style={{position:"relative", marginTop:"-700px", marginLeft:"700px", fontSize:"90px", fontWeight:"599" }} >Чем мы<br/>занимаемся? </h1>
+            <img src={ZelenayaDroch} alt="/" style={{position:"relative", marginTop:"120px", marginLeft:"-280px", zIndex:"-4"}} />
+            <h1 style={{position:"relative", marginTop:"-700px", marginLeft:"700px", fontSize:"90px", fontWeight:"999" }} >Чем мы<br/>занимаемся? </h1>
             <p style={{position:"absolute", marginLeft:"700px", fontSize:"20px", }} >Мы предоставляем комплексный набор услуг для продвижения<br/>
             сайта, используя в работе инструменты онлайн маркетинга.</p>
           </Container>
@@ -138,36 +199,200 @@ export default class main extends Component {
               <img src={Card5} alt="/" style={{position:"absolute",width:"300px" ,marginTop:"180px", marginLeft:"50px", zIndex:"0"}} className='Card'/>
               <h1 style={{position:"absolute", marginLeft:"160px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} className='CardText'>Web-дизайн</h1>
               <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} className='CardText'>Стилизация, идентификация и многое другое решает дизайн. Дизайн это то, что работает. Дизайн и креатив, совмещая которые можно уменьшить вложения в рекламу в несколько раз.</p>
-              <a href="/" style={{position:"absolute",marginLeft:"145px", marginTop:"530px", color:"black", textDecoration:"none", fontSize:"20px", zIndex:"1" }} className='CardText'>Узнать больше></a>
-              <img src={kvadratik} alt="/" style={{position:"relative",marginLeft:"145px", marginTop:"515px", zIndex:"0"}} className='Card'/>
-              <img src={polosochka} alt="/" style={{position:"absolute",marginLeft:"-55px", marginTop:"555px", width:"170px" }}className='Card'/>
+
+
+
+
+
+              <NavLink
+  to="/" 
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginLeft: hovered ? "150px" : "142px", // Смещение вправо при наведении
+    marginTop: hovered ? "523px" : "527px",
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+
+<NavLink
+  to="/about" 
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "116px",
+    marginTop: "540px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочока" />
+</NavLink>
+
+<NavLink
+  to="/AboutUs" 
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "530px",
+    marginLeft: "154px",
+    zIndex: "11",
+    fontSize: '1.1em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Узнать больше<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}> ></span>
+</NavLink>
+
+
+
+
+
+
               </Container>
               </Col>
               <Col>
               <img src={shadow} style={{position:"absolute",width:"272px", marginTop:"228px", marginLeft:"79px", rotate:"180deg", zIndex:"-3"}}/>
               <Container style={{position:"absolute"}} className='CardContainer'>
               <img src={Card5} alt="/" style={{position:"absolute",width:"300px" ,marginTop:"180px", marginLeft:"50px", zIndex:"0"}} className='Card'/>
-              <h1 style={{position:"absolute", marginLeft:"160px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} className='CardText'>Web-дизайн</h1>
-              <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} className='CardText'>Стилизация, идентификация и многое другое решает дизайн. Дизайн это то, что работает. Дизайн и креатив, совмещая которые можно уменьшить вложения в рекламу в несколько раз.</p>
-              <a href="/" style={{position:"absolute",marginLeft:"145px", marginTop:"530px", color:"black", textDecoration:"none", fontSize:"20px", zIndex:"1" }} className='CardText'>Узнать больше></a>
-              <img src={kvadratik} alt="/" style={{position:"relative",marginLeft:"145px", marginTop:"515px", zIndex:"0"}} className='Card'/>
-              <img src={polosochka} alt="/" style={{position:"absolute",marginLeft:"-55px", marginTop:"555px", width:"170px" }}className='Card'/>
+              <h1 style={{position:"absolute", marginLeft:"138px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} className='CardText'>Создание сайтов</h1>
+              <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} className='CardText'>Сайт - это один из инструментов продаж онлайн, большинство современных технологий диджитал, напрямую зависит от качества <br/> и функциональности ресурса, которые мы можем обеспечить.</p>
+           
+
+
+
+   <NavLink
+  to="/" 
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginLeft: hovered ? "150px" : "142px", // Смещение вправо при наведении
+    marginTop: hovered ? "523px" : "527px",
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+
+<NavLink
+  to="/about" 
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "116px",
+    marginTop: "540px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочока" />
+</NavLink>
+
+<NavLink
+  to="/AboutUs" 
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "530px",
+    marginLeft: "154px",
+    zIndex: "11",
+    fontSize: '1.1em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Узнать больше<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}> ></span>
+</NavLink>
+
+
+
+
               </Container>
               </Col>
               <Col>
               <img src={shadow} style={{position:"absolute",width:"272px", marginTop:"228px", marginLeft:"79px", rotate:"180deg", zIndex:"-3"}}/>
               <Container style={{position:"relative"}} className='CardContainer'>
               <img src={Card5} alt="/" style={{position:"absolute",width:"300px" ,marginTop:"180px", marginLeft:"50px", zIndex:"0"}} className='Card'/>
-              <h1 style={{position:"absolute", marginLeft:"160px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} className='CardText'>Web-дизайн</h1>
-              <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} className='CardText'>Стилизация, идентификация и многое другое решает дизайн. Дизайн это то, что работает. Дизайн и креатив, совмещая которые можно уменьшить вложения в рекламу в несколько раз.</p>
-              <a href="/" style={{position:"absolute",marginLeft:"145px", marginTop:"530px", color:"black", textDecoration:"none", fontSize:"20px", zIndex:"1" }} className='CardText'>Узнать больше></a>
-              <img src={kvadratik} alt="/" style={{position:"relative",marginLeft:"145px", marginTop:"515px", zIndex:"0"}} className='Card'/>
-              <img src={polosochka} alt="/" style={{position:"absolute",marginLeft:"-55px", marginTop:"555px", width:"170px" }}className='Card'/>
-              </Container>
+              <h1 style={{position:"absolute", marginLeft:"150px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} className='CardText'>Продвижение</h1>
+              <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} className='CardText'>Это комплекс мер по обеспечению посещаемости сайта целевыми посетителями. Мы не делаем, что-то волшебное, мы грамотно выполняем свою работу, и не только. </p>
+           
+
+              <NavLink
+  to="/" 
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginLeft: hovered ? "150px" : "142px", // Смещение вправо при наведении
+    marginTop: hovered ? "523px" : "527px",
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+
+<NavLink
+  to="/about" 
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "116px",
+    marginTop: "540px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочока" />
+</NavLink>
+
+<NavLink
+  to="/AboutUs" 
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "530px",
+    marginLeft: "154px",
+    zIndex: "11",
+    fontSize: '1.1em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Узнать больше<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}> ></span>
+</NavLink>
+
+
+
+
+
+              </Container >
               </Col>
             </Row>
-          </Container>
-          <Container className="ms-50">
+          </Container >
+          <Container className="ms-50" style={{marginTop:"500px"}}>
             <img src={train} alt="/" style={{width:"90%", position:"relative", left:"100px"}} />
             <img src={Oblako5} alt="/" style={{width:"25%", position:"relative", top:"-380px", left:"220px"}}/>
             <h1 style={{position:"relative", top:"-430px", left:"100px", fontSize:"70px", fontWeight:"699"}} > Как мы <br/> работаем</h1>
@@ -248,3 +473,6 @@ export default class main extends Component {
     )
   }
 }
+
+
+export default MainPage;

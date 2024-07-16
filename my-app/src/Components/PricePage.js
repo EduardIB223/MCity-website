@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Carousel, CarouselItem, CarouselCaption, NavLink } from 'react-bootstrap'
 import fon1 from './Photo3/Rectangle 10.svg'
 import road from './Photo3/48108320-vector-illustration-of-outline-of-perspective-of-curved-road 1.svg'
 import tree from './Photo3/klipartz.com - 2020-12-29T203255.svg'
@@ -24,10 +24,21 @@ import Cloud2 from './Photo3/цитата м сити.svg'
 import ugol from './Photo3/Group 148.svg'
 import './Animation/ForCardInPricePage.css'
 import shadow from './Animation/UnionForPerehod.svg'
+import kvadratik from './Photo/Rectangle 12.svg';
+import polosochka from './Photo/Rectangle 11.svg';
 
 
 export default class PricePage extends Component {
+  state = {
+    hovered: false,
+  };
+
+  setHovered = (value) => {
+    this.setState({ hovered: value });
+  };
+
   render() {
+    const { hovered } = this.state;
     return (
       <div>
         <Container className="ms-50" >
@@ -58,7 +69,62 @@ export default class PricePage extends Component {
               <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>от 9.950 грн</h1>
               <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>Разработка сайтов</h1>
               <p style={{position:"absolute", marginTop:"-340px", marginLeft:"30px", fontSize:"20px"}} className='CardText'>Стоимость разработки сайта<br/> зависит от поставленной<br/> задачи проекта</p>
-              <a href="/" style={{position:"absolute", marginTop:"350px", marginLeft:"-350px"}}><img src={buy} /> </a>
+
+
+
+
+              <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginTop: hovered ? "-157px" : "-154px",
+    marginLeft: hovered ? "43px" : "30px", // Смещение вправо при наведении
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "8px", // Зафиксировано
+    marginTop: "-140px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "365px",
+    marginLeft: "-330px",
+    zIndex: "11",
+    fontSize: '1.3em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Заказать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;></span>
+</NavLink>
+
+
+
+
+
+
+
             </Container>
             </Col>
             <Col>
@@ -68,7 +134,60 @@ export default class PricePage extends Component {
               <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>от 25.505 грн</h1>
               <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>Разработка<br/>интернет-магазина</h1>
               <p style={{position:"absolute", marginTop:"-340px", marginLeft:"30px", fontSize:"18px"}} className='CardText'>Мы разрабатываем только <br/>индивидуальные интернет<br/> магазины. без использования<br/> готовых шаблонов и готовых CMS<br/> типа Presta Shop, Shopyfi и других</p>
-              <a href="/" style={{position:"absolute", marginTop:"350px", marginLeft:"-350px"}}><img src={buy} /> </a>
+
+
+
+
+              <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginTop: hovered ? "-157px" : "-154px",
+    marginLeft: hovered ? "43px" : "30px", // Смещение вправо при наведении
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "8px", // Зафиксировано
+    marginTop: "-140px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "365px",
+    marginLeft: "-330px",
+    zIndex: "11",
+    fontSize: '1.3em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Заказать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;></span>
+</NavLink>
+
+
+
+
+
               </Container>
             </Col>
             <Col>
@@ -78,7 +197,60 @@ export default class PricePage extends Component {
               <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>от 6.500 грн</h1>
               <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>landing page</h1>
               <p style={{position:"absolute", marginTop:"-350px", marginLeft:"30px", fontSize:"18px"}}>Есть готовые решения, в которые<br/> осталось добавить только ваши<br/> фирменные цвета и наполнить<br/> содержимым. Либо же создадим <br/>уникальный дизайн только для вас</p>
-              <a href="/" style={{position:"absolute", marginTop:"350px", marginLeft:"-350px"}}><img src={buy} /> </a>
+
+
+
+
+              <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginTop: hovered ? "-157px" : "-154px",
+    marginLeft: hovered ? "43px" : "30px", // Смещение вправо при наведении
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "8px", // Зафиксировано
+    marginTop: "-140px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "365px",
+    marginLeft: "-330px",
+    zIndex: "11",
+    fontSize: '1.3em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Заказать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;></span>
+</NavLink>
+
+
+
+
+
               </Container>
             </Col>
           </Row>
@@ -90,7 +262,57 @@ export default class PricePage extends Component {
               <h1 className='Card' style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>от 11.850 грн</h1>
               <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>Комплексный <br/>онлайн- маркетинг</h1>
               <p style={{position:"absolute", marginTop:"-340px", marginLeft:"30px", fontSize:"20px"}} className='CardText'>Разработка, анализ, реализация<br/> комплексной стратегии<br/> продвижения. Наша цель  — это<br/> системный рост продаж</p>
-              <a href="/" style={{position:"absolute", marginTop:"350px", marginLeft:"-350px"}}><img src={buy} /> </a>
+
+
+
+              <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginTop: hovered ? "-157px" : "-154px",
+    marginLeft: hovered ? "43px" : "30px", // Смещение вправо при наведении
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "8px", // Зафиксировано
+    marginTop: "-140px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "365px",
+    marginLeft: "-330px",
+    zIndex: "11",
+    fontSize: '1.3em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Заказать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;></span>
+</NavLink>
+
+
+
               </Container>
             </Col>
             <Col>
@@ -100,7 +322,57 @@ export default class PricePage extends Component {
               <h1 style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>от 9.150 грн</h1>
               <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}} className='CardText'>Настройка и ведение<br/>Google рекламы</h1>
               <p style={{position:"absolute", marginTop:"-345px", marginLeft:"30px", fontSize:"20px"}} className='CardText'>Приоритетная реклама в <br/>поисковой выдачи, баннерная<br/> реклама, ремаркетинг, реклама<br/>в YouTube </p>
-              <a href="/" style={{position:"absolute", marginTop:"350px", marginLeft:"-350px"}}><img src={buy} /> </a>
+
+
+
+              <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginTop: hovered ? "-157px" : "-154px",
+    marginLeft: hovered ? "43px" : "30px", // Смещение вправо при наведении
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "8px", // Зафиксировано
+    marginTop: "-140px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "365px",
+    marginLeft: "-330px",
+    zIndex: "11",
+    fontSize: '1.3em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Заказать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;></span>
+</NavLink>
+
+
+
               </Container>
             </Col>
             <Col >
@@ -110,7 +382,56 @@ export default class PricePage extends Component {
               <h1  className='Card' style={{position:"absolute", marginTop:"-460px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}  className='CardText'>от 7.950 грн</h1>
               <h1 style={{position:"absolute", marginTop:"-420px", marginLeft:"30px", fontSize:"30px", fontWeight:"699"}}  className='CardText'>Продвижение<br/>в социальных сетях </h1>
               <p style={{position:"absolute", marginTop:"-345px", marginLeft:"30px", fontSize:"20px"}}  className='CardText'>Настройка и ведение<br/> таргетированной рекламы,<br/> лидогенерация, комплексное <br/>развитие аккаунта,постинг<br/> актуального контента</p>
-              <a href="/" style={{position:"absolute", marginTop:"350px", marginLeft:"-350px"}}><img src={buy} /> </a>
+
+
+              <NavLink
+  to="/" // Измените href на to
+  style={{
+    position: "absolute",
+    fontSize: "18px",
+    marginTop: hovered ? "-157px" : "-154px",
+    marginLeft: hovered ? "43px" : "30px", // Смещение вправо при наведении
+    zIndex: "5"
+  }}
+  className={`kvadratik ${hovered ? 'hovered' : ''}`}
+>
+  <img src={kvadratik} alt="Kvadratik" />
+</NavLink>
+<NavLink
+  to="/about" // Измените здесь на /about
+  style={{
+    position: "absolute",
+    fontSize: "20px",
+    marginLeft: "8px", // Зафиксировано
+    marginTop: "-140px",
+    zIndex: "5"
+  }}
+  className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+>
+  <img src={polosochka} alt="Polosочoka" />
+</NavLink>
+<NavLink
+  to="/AboutUs" // Здесь тоже измените на /about
+  style={{
+    position: 'absolute',
+    fontWeight: "700",
+    display: 'inline-block',
+    textAlign: 'center',
+    marginTop: "365px",
+    marginLeft: "-330px",
+    zIndex: "11",
+    fontSize: '1.3em',
+    color: hovered ? 'white' : 'black'
+  }}
+  className="start-project"
+  onMouseEnter={() => this.setHovered(true)}
+  onMouseLeave={() => this.setHovered(false)}
+>
+  Заказать<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}>&nbsp;&nbsp;&nbsp;></span>
+</NavLink>
+
+
+
               </Container>
             </Col>
           </Row>
