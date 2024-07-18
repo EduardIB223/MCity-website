@@ -13,7 +13,7 @@
     transition: width 0.3s, height 0.3s, left 0.3s;
     transform-origin: center; /* трансформация от центра */
 }
-.kvadratik.hovered img {
+img.kvadratik:hover {
     transform: scale(0.1, 0.6); /* если это нужное масштабирование */
     left: -71px; /* сдвиг, чтобы оставался на месте */
     top: -5px;

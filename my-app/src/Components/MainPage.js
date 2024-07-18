@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Carousel2 from './Carousel2'
-import { Container, Carousel, CarouselItem, CarouselCaption, NavLink} from 'react-bootstrap';
+import { Container, NavLink} from 'react-bootstrap';
 import fon from './Photo/Rectangle 10.svg';
 import Bukva from './Photo/img_1_491_94126f.svg';
 import Okruzhnost from './Photo/Ellipse 2.svg';
@@ -54,7 +54,8 @@ import QuotMarks from './Photo/Group (1).svg'
 import Carousel1 from './Carousel1'
 import WhiteArrow from './Photo/отправить.svg'
 import './Animation/ForMainPage.css'
-
+import { Link, useLocation } from 'react-router-dom';
+import './Animation/AktLink2.css'
 
 
 class MainPage extends Component {
@@ -64,6 +65,9 @@ class MainPage extends Component {
 
   setHovered = (value) => {
     this.setState({ hovered: value });
+  };
+  handleLinkClick = () => {
+    window.scrollTo(0, 0);
   };
 
   render() {
@@ -123,16 +127,9 @@ class MainPage extends Component {
           <img src={CherniyFon} alt="/" style={{ position: "relative", bottom: "630px", right: "280px", zIndex: "2" }} />
           <img src={ChernayaDroch} alt="/" style={{ position: "relative", bottom: "631px", right: "281px", zIndex: "2" }} />
           <h1 style={{ position: "absolute", marginTop: "-750px", marginLeft: "40px", color: "white", zIndex: "3", fontSize: "90px" }}>Кто мы?</h1>
-
-
-
-
-
-
-
-
           <NavLink
-  to="/" // Измените href на to
+           as={Link}
+  to="/about" // Измените href на to
   style={{
     position: "absolute",
     fontSize: "18px",
@@ -141,10 +138,12 @@ class MainPage extends Component {
     zIndex: "5"
   }}
   className={`kvadratik ${hovered ? 'hovered' : ''}`}
+  onClick={this.handleLinkClick}
 >
   <img src={kvadratik} alt="Kvadratik" />
 </NavLink>
 <NavLink
+  as={Link}
   to="/about" // Измените здесь на /about
   style={{
     position: "absolute",
@@ -154,11 +153,13 @@ class MainPage extends Component {
     zIndex: "5"
   }}
   className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+  onClick={this.handleLinkClick}
 >
-  <img src={polosochka} alt="Polosочoka" />
+  <img src={polosochka} alt="Polosочoka" className="ForPolosochka"/>
 </NavLink>
 <NavLink
-  to="/AboutUs" // Здесь тоже измените на /about
+  as={Link}
+  to="/about" // Здесь тоже измените на /about
   style={{
     position: 'absolute',
     fontWeight: "700",
@@ -171,16 +172,12 @@ class MainPage extends Component {
     color: hovered ? 'white' : 'black'
   }}
   className="start-project"
+  onClick={this.handleLinkClick}
   onMouseEnter={() => this.setHovered(true)}
   onMouseLeave={() => this.setHovered(false)}
 >
   Узнать больше<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}> ></span>
 </NavLink>
-
-
-
-
-
           <p style={{ fontSize: "18px", width: "600px", position: "relative", marginTop: "-990px", marginLeft: "700px" }}>Веб-дизайн студия MariupolCity.com - стабильно работающая на <br /> рынке IT-услуг компания, которой реализовано более 200 <br />интернет-проектов для наших Клиентов.
             <br /><br />
             Наши сотрудники обладают тремя важными качествами - <br /> честностью, ответственностью, стремлением быть лучшими в своем деле. Эти качества являются залогом прочных и долгосрочных отношений с нашими Клиентами.</p>
@@ -199,13 +196,9 @@ class MainPage extends Component {
               <img src={Card5} alt="/" style={{position:"absolute",width:"300px" ,marginTop:"180px", marginLeft:"50px", zIndex:"0"}} className='Card'/>
               <h1 style={{position:"absolute", marginLeft:"160px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} className='CardText'>Web-дизайн</h1>
               <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} className='CardText'>Стилизация, идентификация и многое другое решает дизайн. Дизайн это то, что работает. Дизайн и креатив, совмещая которые можно уменьшить вложения в рекламу в несколько раз.</p>
-
-
-
-
-
               <NavLink
-  to="/" 
+  as={Link}
+  to="/about"
   style={{
     position: "absolute",
     fontSize: "18px",
@@ -214,6 +207,7 @@ class MainPage extends Component {
     zIndex: "5"
   }}
   className={`kvadratik ${hovered ? 'hovered' : ''}`}
+  onClick={this.handleLinkClick}
   onMouseEnter={() => this.setHovered(true)}
   onMouseLeave={() => this.setHovered(false)}
 >
@@ -221,7 +215,8 @@ class MainPage extends Component {
 </NavLink>
 
 <NavLink
-  to="/about" 
+  as={Link}
+  to="/about"
   style={{
     position: "absolute",
     fontSize: "20px",
@@ -230,12 +225,14 @@ class MainPage extends Component {
     zIndex: "5"
   }}
   className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+  onClick={this.handleLinkClick}
 >
   <img src={polosochka} alt="Polosочока" />
 </NavLink>
 
 <NavLink
-  to="/AboutUs" 
+  as={Link}
+  to="/about"
   style={{
     position: 'absolute',
     fontWeight: "700",
@@ -248,17 +245,12 @@ class MainPage extends Component {
     color: hovered ? 'white' : 'black'
   }}
   className="start-project"
+  onClick={this.handleLinkClick}
   onMouseEnter={() => this.setHovered(true)}
   onMouseLeave={() => this.setHovered(false)}
 >
   Узнать больше<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}> ></span>
 </NavLink>
-
-
-
-
-
-
               </Container>
               </Col>
               <Col>
@@ -266,13 +258,10 @@ class MainPage extends Component {
               <Container style={{position:"absolute"}} className='CardContainer'>
               <img src={Card5} alt="/" style={{position:"absolute",width:"300px" ,marginTop:"180px", marginLeft:"50px", zIndex:"0"}} className='Card'/>
               <h1 style={{position:"absolute", marginLeft:"138px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} className='CardText'>Создание сайтов</h1>
-              <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} className='CardText'>Сайт - это один из инструментов продаж онлайн, большинство современных технологий диджитал, напрямую зависит от качества <br/> и функциональности ресурса, которые мы можем обеспечить.</p>
-           
-
-
-
+              <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} className='CardText'>Сайт - это один из инструментов продаж онлайн, большинство современных технологий диджитал, напрямую зависит от качества <br/> и функциональности ресурса, которые мы можем обеспечить.</p>       
    <NavLink
-  to="/" 
+ as={Link}
+ to="/about" 
   style={{
     position: "absolute",
     fontSize: "18px",
@@ -281,14 +270,15 @@ class MainPage extends Component {
     zIndex: "5"
   }}
   className={`kvadratik ${hovered ? 'hovered' : ''}`}
+  onClick={this.handleLinkClick}
   onMouseEnter={() => this.setHovered(true)}
   onMouseLeave={() => this.setHovered(false)}
 >
   <img src={kvadratik} alt="Kvadratik" />
 </NavLink>
-
 <NavLink
-  to="/about" 
+ as={Link}
+ to="/about" 
   style={{
     position: "absolute",
     fontSize: "20px",
@@ -297,12 +287,13 @@ class MainPage extends Component {
     zIndex: "5"
   }}
   className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+  onClick={this.handleLinkClick}
 >
   <img src={polosochka} alt="Polosочока" />
 </NavLink>
-
 <NavLink
-  to="/AboutUs" 
+ as={Link}
+  to="/about"
   style={{
     position: 'absolute',
     fontWeight: "700",
@@ -315,15 +306,12 @@ class MainPage extends Component {
     color: hovered ? 'white' : 'black'
   }}
   className="start-project"
+  onClick={this.handleLinkClick}
   onMouseEnter={() => this.setHovered(true)}
   onMouseLeave={() => this.setHovered(false)}
 >
   Узнать больше<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}> ></span>
 </NavLink>
-
-
-
-
               </Container>
               </Col>
               <Col>
@@ -332,10 +320,9 @@ class MainPage extends Component {
               <img src={Card5} alt="/" style={{position:"absolute",width:"300px" ,marginTop:"180px", marginLeft:"50px", zIndex:"0"}} className='Card'/>
               <h1 style={{position:"absolute", marginLeft:"150px", marginTop:"280px", fontSize:"20px", fontWeight:"699"}} className='CardText'>Продвижение</h1>
               <p style={{width:"250px", textAlign:"center", position:"absolute",marginLeft:"90px", marginTop:"330px"}} className='CardText'>Это комплекс мер по обеспечению посещаемости сайта целевыми посетителями. Мы не делаем, что-то волшебное, мы грамотно выполняем свою работу, и не только. </p>
-           
-
               <NavLink
-  to="/" 
+  as={Link}
+  to="/about" 
   style={{
     position: "absolute",
     fontSize: "18px",
@@ -344,14 +331,16 @@ class MainPage extends Component {
     zIndex: "5"
   }}
   className={`kvadratik ${hovered ? 'hovered' : ''}`}
+  onClick={this.handleLinkClick}
   onMouseEnter={() => this.setHovered(true)}
   onMouseLeave={() => this.setHovered(false)}
 >
-  <img src={kvadratik} alt="Kvadratik" />
+  <img src={kvadratik} alt="Kvadratik" className='First-Button'/>
 </NavLink>
 
 <NavLink
-  to="/about" 
+ as={Link}
+  to="/about"
   style={{
     position: "absolute",
     fontSize: "20px",
@@ -360,12 +349,14 @@ class MainPage extends Component {
     zIndex: "5"
   }}
   className={`ForPolosochka ${hovered ? 'hovered' : ''}`}
+  onClick={this.handleLinkClick}
 >
   <img src={polosochka} alt="Polosочока" />
 </NavLink>
 
 <NavLink
-  to="/AboutUs" 
+  as={Link}
+  to="/about"
   style={{
     position: 'absolute',
     fontWeight: "700",
@@ -378,16 +369,12 @@ class MainPage extends Component {
     color: hovered ? 'white' : 'black'
   }}
   className="start-project"
+  onClick={this.handleLinkClick}
   onMouseEnter={() => this.setHovered(true)}
   onMouseLeave={() => this.setHovered(false)}
 >
   Узнать больше<span style={{ fontSize: '0.6em', fontWeight: 'bold' }}> ></span>
 </NavLink>
-
-
-
-
-
               </Container >
               </Col>
             </Row>

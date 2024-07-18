@@ -30,8 +30,7 @@ export default class StartProject extends Component {
         return (
       <div>
         <Container className="ms-50" >
-            <h1 style={{position:"absolute", marginLeft:"800px", fontSize:"80px", fontWeight:"699", zIndex:"1", marginTop:"50px"}}>Разработка</h1>
-            <p style={{position:"absolute", marginLeft:"1240px", fontSize:"20px", fontWeight:"699", zIndex:"1", marginTop:"280px"}}>Наши самураи каждый день стоят<br/> на стражи хороших сайтов</p>
+            <h1 style={{position:"absolute", marginLeft:"780px", fontSize:"80px", fontWeight:"699", zIndex:"1", marginTop:"70px"}}>Разработка</h1>
             <img src={Shapka} style={{position:"relative", marginLeft:"-300px", marginTop:"-150px"}}/>
         </Container>
         <Container className="ms-50">

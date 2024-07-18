@@ -50,3 +50,26 @@
 .ContainerCard2:hover{
     margin-top:-35px;
 }
+.kvadratik {
+    transition: margin 0.3s;
+  }
+  
+  .kvadratik.hovered {
+    margin-left: 110px;
+  }
+  
+  .ForPolosochka {
+    transition: margin 0.3s;
+  }
+  
+  .ForPolosochka.hovered {
+    margin-left: 75px;
+  }
+  
+  .start-project {
+    transition: color 0.3s;
+  }
+  
+  .start-project.hovered {
+    color: white;
+  }

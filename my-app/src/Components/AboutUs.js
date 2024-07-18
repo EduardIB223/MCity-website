@@ -49,12 +49,15 @@ import SendMail from './Photo2/Group 66.svg'
 import BlackLine from './Photo2/Rectangle 126.svg'
 import kvadratik from './Photo/Rectangle 12.svg'
 import polosochka from './Photo/Rectangle 11.svg'
+import { Link, useLocation } from 'react-router-dom';
 
 export default class AboutUs extends Component {
   state = {
     hovered: false,
   };
-
+  handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
   setHovered = (value) => {
     this.setState({ hovered: value });
   };
@@ -128,7 +131,8 @@ export default class AboutUs extends Component {
                 <p style={{position:"absolute", marginLeft:"792px", marginTop:"1750px", zIndex:"1", fontSize:"20px"}}>По этому мы продвигаем ваши продукты и<br/> контент, чтобы расширить охват вашего бренда,<br/> привлечь внимание, увеличить трафик и<br/> завоевать авторитет и доверие в поисковых<br/> системах. </p>
                 <img src={BlackStick} style={{position:"relative", marginLeft:"-300px", marginTop:"2050px", zIndex:"-1"}} />
                 <NavLink
-  to="/" 
+  as={Link}
+  to="/Promotion" 
   style={{
     position: "absolute",
     fontSize: "18px",
@@ -137,6 +141,7 @@ export default class AboutUs extends Component {
     zIndex: "5"
   }}
   className={`kvadratik1 ${hovered ? 'hovered' : ''}`}
+  onClick={this.handleLinkClick}
   onMouseEnter={() => this.setHovered(true)}
   onMouseLeave={() => this.setHovered(false)}
 >
@@ -144,7 +149,8 @@ export default class AboutUs extends Component {
 </NavLink>
 
 <NavLink
-  to="/about" 
+   as={Link}
+   to="/Promotion" 
   style={{
     position: "absolute",
     fontSize: "20px",
@@ -154,12 +160,14 @@ export default class AboutUs extends Component {
     transformOrigin: "center" // правильно написан
   }}
   className={`ForPolosochka1 ${hovered ? 'hovered' : ''}`}
+  onClick={this.handleLinkClick}
 >
   <img src={polosochka} alt="Polosочока" />
 </NavLink>
 
 <NavLink
-  to="/AboutUs" 
+   as={Link}
+   to="/Promotion" 
   style={{
     position: 'absolute',
     fontWeight: "700",
@@ -172,6 +180,7 @@ export default class AboutUs extends Component {
     color: hovered ? 'white' : 'black'
   }}
   className="start-project"
+  onClick={this.handleLinkClick}
   onMouseEnter={() => this.setHovered(true)}
   onMouseLeave={() => this.setHovered(false)}
 >

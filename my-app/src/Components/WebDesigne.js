@@ -51,9 +51,6 @@ export default class WebDesigne extends Component {
                     <img src={Card1} alt="/" />
                     <h1 style={{position:"absolute", fontSize:"25px", marginTop:"-310px", marginLeft:"20px"}}>Индивидуальный дизайн</h1>
                     <p style={{position:"absolute", fontSize:"18px", marginTop:"-250px", marginLeft:"20px"}}>Реализация любых нестандартных и<br/> стандартных веб-решений в<br/> области дизайна и функционала<br/> ресурса. Создание вашего бренда и<br/> узнаваемости, повышение имиджа<br/> компании в глазах покупателей.</p>
-
-
-
                     <NavLink
   to="/" // Измените href на to
   style={{
